@@ -1,0 +1,648 @@
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Spark Framework - Documentation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="description" content="Spark Framework - Create web applications in Java rapidly. Spark is a micro web framework that lets you focus on writing your code, not boilerplate code.">
+        <script>for(var a="nav section footer".split(" "),b=0;b<a.length;b++){document.createElement(a[b])}</script>
+        <link rel="stylesheet" media="screen" href="/assets/stylesheets/main.min.css">
+        <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
+    </head>
+
+    <body>
+        <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W4XBCK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W4XBCK');</script>
+<!-- End Google Tag Manager -->
+        <!-- Fork me on GitHub -->
+<a id="fork-me" href="https://github.com/perwendel/spark" target="_blank">
+    <img style="position:fixed;top:0;right:0;border:0;z-index:99999"
+    src='data:image/png;base64,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'
+    alt="Fork me on GitHub">
+</a>
+<!-- End Fork me on GitHub -->
+        <div id="some-buttons">
+            <a id="some-twitter" href="https://twitter.com/sparkjava" target="_blank">
+    <img src='data:image/svg+xml;base64,PHN2ZyB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHg9IjAiIHk9IjAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSI0MCAtNjAgMjAwIDIwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyA0MCAtNTkuOCAyMDAgMjAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjMkFBOUUwIiBkPSJNMTQwLTUwYzUwIDAgOTAgNDAgOTAgOTBzLTQwIDkwLTkwIDkwYy01MCAwLTkwLTQwLTkwLTkwUzkwLTUwIDE0MC01ME0xNDAtNjBDODUtNjAgNDAtMTUgNDAgNDBzNDUgMTAwIDEwMCAxMDBjNTUgMCAxMDAtNDUgMTAwLTEwMFMxOTUtNjAgMTQwLTYwTDE0MC02MHpNMTk5IDljLTQgMi05IDMtMTQgNCA1LTMgOS04IDExLTEzIC01IDMtMTAgNS0xNSA2IC00LTUtMTEtOC0xOC04IC0xMyAwLTI0IDExLTI0IDI0IDAgMiAwIDQgMSA2IC0yMC0xLTM4LTExLTUwLTI1IC0yIDQtMyA4LTMgMTIgMCA4IDQgMTYgMTEgMjAgLTQgMC04LTEtMTEtMyAwIDAgMCAwIDAgMCAwIDEyIDggMjIgMTkgMjQgLTIgMS00IDEtNiAxIC0yIDAtMyAwLTUgMCAzIDEwIDEyIDE3IDIzIDE3IC04IDctMTkgMTAtMzAgMTAgLTIgMC00IDAtNiAwIDExIDcgMjQgMTEgMzcgMTEgNDUgMCA2OS0zNyA2OS02OSAwLTEgMC0yIDAtM0MxOTIgMTggMTk2IDE0IDE5OSA5TDE5OSA5eiIvPjwvc3ZnPg=='
+    title="Follow Spark on Twitter"
+    alt="Follow Spark on Twitter">
+</a>
+            <a id="some-gplus" href="https://plus.google.com/+Sparkjavaplus" target="_blank">
+    <img src='data:image/svg+xml;base64,PHN2ZyB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHg9IjAiIHk9IjAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSItOSAtOSAyMDAgMjAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC05LjUgLTkuMiAyMDAgMjAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjREM0QTM4IiBkPSJNOTEtOWMtNTUgMC0xMDAgNDUtMTAwIDEwMCAwIDU1IDQ1IDEwMCAxMDAgMTAwczEwMC00NSAxMDAtMTAwQzE5MSAzNiAxNDYtOSA5MS05TDkxLTl6TTkxIDFjNTAgMCA5MCA0MCA5MCA5MCAwIDUwLTQwIDkwLTkwIDkwIC01MCAwLTkwLTQwLTkwLTkwQzEgNDEgNDEgMSA5MSAxTTEwNCAxMDVsLTUtNGMtMi0xLTQtMy00LTYgMC0zIDItNSA0LTcgNi01IDEzLTEwIDEzLTIxIDAtMTEtNy0xNy0xMS0yMGg5bDEwLTZIOTBjLTggMC0yMCAyLTI4IDkgLTYgNi05IDEzLTkgMjAgMCAxMiA5IDIzIDI1IDIzIDIgMCAzIDAgNSAwIC0xIDItMSAzLTEgNiAwIDUgMiA4IDUgMTAgLTcgMS0xOSAxLTI4IDcgLTkgNS0xMSAxMy0xMSAxOCAwIDExIDEwIDIxIDMyIDIxIDI2IDAgMzktMTQgMzktMjhDMTE2IDExNiAxMTAgMTEwIDEwNCAxMDV6TTg0IDg4Yy0xMyAwLTE5LTE3LTE5LTI3IDAtNCAxLTggMy0xMSAyLTMgNy01IDEwLTVDOTIgNDUgOTggNjIgOTggNzNjMCAzIDAgOC00IDExQzkyIDg2IDg4IDg4IDg0IDg4ek04NCAxNDhjLTE2IDAtMjYtOC0yNi0xOCAwLTExIDEwLTE0IDEzLTE1IDYtMiAxNC0yIDE2LTIgMiAwIDIgMCAzIDAgMTEgOCAxNiAxMiAxNiAyMEMxMDYgMTQxIDk5IDE0OCA4NCAxNDh6Ii8+PHBvbHlnb24gZmlsbD0iI0RDNEEzOCIgcG9pbnRzPSIxNDEgODggMTQxIDczIDEzNCA3MyAxMzQgODggMTE5IDg4IDExOSA5NSAxMzQgOTUgMTM0IDExMCAxNDEgMTEwIDE0MSA5NSAxNTYgOTUgMTU2IDg4ICIvPjwvc3ZnPg=='
+    title="Follow Spark on Google Plus"
+    alt="Follow Spark on Google Plus">
+</a>
+            <a id="some-facebook" href="https://www.facebook.com/sparkjava" target="_blank">
+    <img src='data:image/svg+xml;base64,PHN2ZyB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIHZpZXdCb3g9IjQwIC01OS44IDIwMCAyMDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgNDAgLTU5LjggMjAwIDIwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzNENUE5QSIgZD0iTTE0MC00OS44YzQ5LjYgMCA5MCA0MC40IDkwIDkwcy00MC40IDkwLTkwIDkwYy00OS42IDAtOTAtNDAuNC05MC05MFM5MC40LTQ5LjggMTQwLTQ5LjhNMTQwLTU5LjhDODQuOC01OS44IDQwLTE1IDQwIDQwLjNzNDQuOCAxMDAgMTAwIDEwMGM1NS4yIDAgMTAwLTQ0LjggMTAwLTEwMFMxOTUuMy01OS44IDE0MC01OS44TDE0MC01OS44eiIvPjxwYXRoIGZpbGw9IiMzQzVBOTkiIHN0cm9rZT0iIzQ4NUM5MCIgZD0iTTE0Mi44LTI0LjdMMTQzLTUuNWMtNC4yIDkuOC0xMi42IDI0LjgtMTguNiAzMC41bC0wLjgtMSAtNDEuNS0wLjFjLTIuMS0wLjEtNC40IDIuNS00LjMgNC4zbDQgNTcuM2MwLjEgMS45IDIgNC4yIDMuOSA0LjJoMzdjMS40IDAgMy40LTEuNSAzLjUtMy40bDAuMi01YzEuMiAxLjggNC40IDQuNSA3LjMgNC41aDQ5LjljNi4zIDAgMTUuOS03LjIgMTIuNy0xOS4zIDMuNS0zLjEgNS43LTguMyAzLjUtMTQuOSAzLjctMy4zIDYuNS05LjUgMy4zLTE1IDEwLTkgMy41LTIxLjYtNC4yLTIxLjZoLTMzLjZjMS4yLTYgMy4yLTEyIDMuMS0xOS45IC0wLjEtNi45LTQuMy0xNi45LTcuNC0yMi4yQzE1OS45LTI5LjUgMTQ4LjItMzMuNyAxNDIuOC0yNC43TDE0Mi44LTI0Ljd6Ii8+PHBhdGggZmlsbD0iIzZFN0ZCMyIgZD0iTTgyLjkgMjkuNGgzNC43bDAuMSA1NS40SDg2LjlMODIuOSAyOS40eiIvPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNTkuNyAyMC4yYzEuNi03IDIuNy0xNC42IDMuNS0yMi4xIDAuMi0xLjggMC4yLTMuNC0wLjEtNC45IC0xLTYtMy4zLTExLjMtNS42LTE2LjcgLTIuMS0xLjgtNi40LTIuNS05LjUgMC4ydjE4LjhjLTUuMyAxMS4yLTExLjMgMjItMTguNyAzMS45bC03IDUuMnY0My42aDQuOGMwIDAgNi40IDQuMiA2LjggNCAwLjYgMC4zIDQ5LjkgMC4xIDQ5LjkgMC4xIDIuNiAwLjEgMTIuMy03LjYgNi4yLTEzLjQgLTAuOC0wLjUtMC43LTIuMSAwLjEtMi43IDMuOC0wLjcgOC41LTguNSAzLjYtMTIuNiAtMC44LTEtMC4yLTIuNSAwLjctMi42IDIuOC0xLjUgNy44LTYuNSAzLjMtMTIuNSAtMC45LTAuNS0wLjktMS44LTAuMS0yLjUgNC4zLTAuNiA5LjgtMTEuMiAwLjctMTMuOEwxNTkuNyAyMC4yeiIvPjwvc3ZnPg=='
+    title="Like Spark on Facebook" alt="Like us on facebook">
+</a>
+        </div>
+        <nav>
+            <ul>
+                <li id="logo"><a href="/"><img src="/assets/images/logo.svg" alt="Spark framework logo"></a></li>
+                <li id="news-li"><a href="/news.html">News</a></li>
+                <li id="contact-li"><a href="/contact.html">Contact</a></li>
+                <li id="tutorial-li"><a href="https://sparktutorials.github.io/" target="_blank">Tutorials</a></li>
+                <li id="documentation-li"><a href="/documentation.html">Documentation</a></li>
+                <li id="download-li"><a href="/download.html">Download</a></li>
+            </ul>
+        </nav>
+        <div class="padding-hack"></div>
+        
+
+<section id="docs">
+
+    <ul class="side-nav" id="docs-nav">
+        <li><a href="#getting-started">Getting Started</a></li>
+        <li><a href="#stopping-the-server">Stopping the Server</a></li>
+        <li><a href="#routes">Routes</a></li>
+        <li><a href="#request">Request</a></li>
+        <li><a href="#response">Response</a></li>
+        <li><a href="#query-maps">Query Maps</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#sessions">Sessions</a></li>
+        <li><a href="#halting">Halting</a></li>
+        <li><a href="#filters">Filters</a></li>
+        <li><a href="#redirects">Redirects</a></li>
+        <li><a href="#exception-mapping">Exception Mapping</a></li>
+        <li><a href="#static-files">Static Files</a></li>
+        <li><a href="#response-transformer">ResponseTransformer</a></li>
+        <li><a href="#views-templates">Views and Templates</a>
+            <ul><li><a href="#freemarker">- Freemarker</a></li>
+                <li><a href="#mustache">- Mustache</a></li>
+                <li><a href="#velocity">- Velocity</a></li>
+                <li><a href="#thymeleaf">- Thymeleaf</a></li>
+                <li><a href="#jade">- Jade</a></li>
+                <li><a href="#jetbrick">- Jetbrick</a></li>
+                <li><a href="#handlebars">- Handlebars</a></li>
+                <li><a href="#pebble">- Pebble</a></li>
+                <li><a href="#water">- Water</a></li>
+            </ul>
+        </li>
+        <li><a href="#embedded-webserver">Embedded Webserver</a>
+            <ul><li><a href="#port">- Port</a></li>
+                <li><a href="#secure">- Secure</a></li>
+                <li><a href="#threadpool">- ThreadPool</a></li>
+                <li><a href="#awaitinit">- Waiting for Initialization</a></li>
+                <li><a href="#websockets">- WebSockets</a>
+            </ul>
+        </li>
+        <li><a href="#other-webserver">Other Webserver</a></li>
+        <li><a href="#gzip">GZIP</a></li>
+        <li><a href="#javadoc">Javadoc</a></li>
+        <li><a href="#examples">Examples/Tutorials</a></li>
+    </ul>
+
+    
+<h1 id="getting-started" class="anchor">Getting started</h1>
+<p>Create a new maven project and add the dependency to your <a href="http://maven.apache.org/pom.html" target="_blank">POM.xml</a>:</p>
+
+
+<div class="code-snippet"><pre><code class="language-markup">&lt;dependency&gt;
+    &lt;groupId&gt;com.sparkjava&lt;/groupId&gt;
+    &lt;artifactId&gt;spark-core&lt;/artifactId&gt;
+    &lt;version&gt;2.3&lt;/version&gt;
+&lt;/dependency&gt;</code></pre></div>
+<a class="maven-help" href="https://sparktutorials.github.io/2015/04/02/setting-up-a-spark-project-with-maven.html" target="_blank">
+    Not familiar with Maven? Click here for more detailed instructions.
+</a>
+
+<p>Start coding:</p>
+
+<div class="code-snippet"><pre><code class="language-java">import static spark.Spark.*;
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        get(&quot;/hello&quot;, (req, res) -&gt; &quot;Hello World&quot;);
+    }
+}</code></pre></div>
+
+<p>Run and view:</p>
+
+<div class="code-snippet"><pre><code class="language-markup">http://localhost:4567/hello</code></pre></div>
+
+<p class="code-comment">
+    That was easy, right? Spark is the simplest Java web framework to set up,
+    while still providing enough functionality for many types of projects.
+</p>
+    
+<h1 id="stopping-the-server" class="anchor">Stopping the Server</h1>
+<p>By calling the stop() method the server is stopped and all routes are cleared.<br><br></p>
+    
+<h1 id="routes" class="anchor">Routes</h1>
+<p>The main building block of a Spark application is a set of routes. A route is made up of three simple pieces:</p>
+<ul class="code-list">
+    <li>A <strong>verb</strong> (get, post, put, delete, head, trace, connect, options)</li>
+    <li>A <strong>path</strong> (/hello, /users/:name)</li>
+    <li>A <strong>callback</strong> (request, response) -> { }</li>
+</ul>
+<p>Routes are matched in the order they are defined. The first route that matches the request is invoked.</p>
+
+
+<div class="code-snippet"><pre><code class="language-java">get(&quot;/&quot;, (request, response) -&gt; {
+// .. Show something ..
+});
+
+post(&quot;/&quot;, (request, response) -&gt; {
+// .. Create something ..
+});
+
+put(&quot;/&quot;, (request, response) -&gt; {
+// .. Update something ..
+});
+
+delete(&quot;/&quot;, (request, response) -&gt; {
+// .. annihilate something ..
+});
+
+options(&quot;/&quot;, (request, response) -&gt; {
+// .. appease something ..
+});</code></pre></div>
+
+<p>Route patterns can include named parameters, accessible via the params method on the request object:</p>
+
+
+<div class="code-snippet"><pre><code class="language-java">// matches &quot;GET /hello/foo&quot; and &quot;GET /hello/bar&quot;
+// request.params(&quot;:name&quot;) is &#x27;foo&#x27; or &#x27;bar&#x27;
+get(&quot;/hello/:name&quot;, (request, response) -&gt; {
+    return &quot;Hello: &quot; + request.params(&quot;:name&quot;);
+});</code></pre></div>
+
+<p>Route patterns can also include splat (or wildcard) parameters. These parameters can be accessed by using the splat method on the request object:</p>
+
+<div class="code-snippet"><pre><code class="language-java">// matches &quot;GET /say/hello/to/world&quot;
+// request.splat()[0] is &#x27;hello&#x27; and request.splat()[1] &#x27;world&#x27;
+get(&quot;/say/*/to/*&quot;, (request, response) -&gt; {
+    return &quot;Number of splat parameters: &quot; + request.splat().length;
+});</code></pre></div>
+    
+<h1 id="request" class="anchor">Request</h1>
+<p>In the handle method request information and functionality is provided by the request parameter:</p>
+
+<div class="code-snippet"><pre><code class="language-java">request.attributes();             // the attributes list
+request.attribute(&quot;foo&quot;);         // value of foo attribute
+request.attribute(&quot;A&quot;, &quot;V&quot;);      // sets value of attribute A to V
+request.body();                   // request body sent by the client
+request.bodyAsBytes();            // request body as bytes
+request.contentLength();          // length of request body
+request.contentType();            // content type of request.body
+request.contextPath();            // the context path, e.g. &quot;/hello&quot;
+request.cookies();                // request cookies sent by the client
+request.headers();                // the HTTP header list
+request.headers(&quot;BAR&quot;);           // value of BAR header
+request.host();                   // the host, e.g. &quot;example.com&quot;
+request.ip();                     // client IP address
+request.params(&quot;foo&quot;);            // value of foo path parameter
+request.params();                 // map with all parameters
+request.pathInfo();               // the path info
+request.port();                   // the server port
+request.protocol();               // the protocol, e.g. HTTP/1.1
+request.queryMap();               // the query map
+request.queryMap(&quot;foo&quot;);          // query map for a certain parameter
+request.queryParams();            // the query param list
+request.queryParams(&quot;FOO&quot;);       // value of FOO query param
+request.queryParamsValues(&quot;FOO&quot;)  // all values of FOO query param
+request.raw();                    // raw request handed in by Jetty
+request.requestMethod();          // The HTTP method (GET, ..etc)
+request.scheme();                 // &quot;http&quot;
+request.servletPath();            // the servlet path, e.g. /result.jsp
+request.session();                // session management
+request.splat();                  // splat (*) parameters
+request.uri();                    // the uri, e.g. &quot;http://example.com/foo&quot;
+request.url();                    // the url. e.g. &quot;http://example.com/foo&quot;
+request.userAgent();              // user agent</code></pre></div>
+    
+<h1 id="response" class="anchor">Response</h1>
+<p>In the handle method response information and functionality is provided by the response parameter:</p>
+
+<div class="code-snippet"><pre><code class="language-java">response.body(&quot;Hello&quot;);        // sets content to Hello
+response.header(&quot;FOO&quot;, &quot;bar&quot;); // sets header FOO with value bar
+response.raw();                // raw response handed in by Jetty
+response.redirect(&quot;/example&quot;); // browser redirect to /example
+response.status(401);          // set status code to 401
+response.type(&quot;text/xml&quot;);     // set content type to text/xml</code></pre></div>
+    
+<h1 id="query-maps" class="anchor">Query Maps</h1>
+<p>Query maps allows you to group parameters to a map by their prefix. This allows you to group two parameters like user[name] and user[age] to a user map.</p>
+
+<div class="code-snippet"><pre><code class="language-java">request.queryMap().get(&quot;user&quot;, &quot;name&quot;).value();
+request.queryMap().get(&quot;user&quot;).get(&quot;name&quot;).value();
+request.queryMap(&quot;user&quot;).get(&quot;age&quot;).integerValue();
+request.queryMap(&quot;user&quot;).toMap();</code></pre></div>
+    
+<h1 id="cookies" class="anchor">Cookies</h1>
+
+<div class="code-snippet"><pre><code class="language-java">request.cookies();                              // get map of all request cookies
+request.cookie(&quot;foo&quot;);                          // access request cookie by name
+response.cookie(&quot;foo&quot;, &quot;bar&quot;);                  // set cookie with a value
+response.cookie(&quot;foo&quot;, &quot;bar&quot;, 3600);            // set cookie with a max-age
+response.cookie(&quot;foo&quot;, &quot;bar&quot;, 3600, true);      // secure cookie
+response.removeCookie(&quot;foo&quot;);                   // remove cookie</code></pre></div>
+    
+<h1 id="sessions" class="anchor">Sessions</h1>
+<p>Every request has access to the session created on the server side, provided with the following methods:</p>
+
+<div class="code-snippet"><pre><code class="language-java">request.session(true)                            // create and return session
+request.session().attribute(&quot;user&quot;)              // Get session attribute &#x27;user&#x27;
+request.session().attribute(&quot;user&quot;, &quot;foo&quot;)       // Set session attribute &#x27;user&#x27;
+request.session().removeAttribute(&quot;user&quot;)        // Remove session attribute &#x27;user&#x27;
+request.session().attributes()                   // Get all session attributes
+request.session().id()                           // Get session id
+request.session().isNew()                        // Check is session is new
+request.session().raw()                          // Return servlet object</code></pre></div>
+    
+<h1 id="halting" class="anchor">Halting</h1>
+<p>To immediately stop a request within a filter or route use:</p>
+
+<div class="code-snippet"><pre><code class="language-java">halt();</code></pre></div>
+
+<p>You can also specify the status when halting:</p>
+
+<div class="code-snippet"><pre><code class="language-java">halt(401);</code></pre></div>
+
+<p>Or the body:</p>
+
+<div class="code-snippet"><pre><code class="language-java">halt(&quot;This is the body&quot;);</code></pre></div>
+
+<p>...or both:</p>
+
+<div class="code-snippet"><pre><code class="language-java">halt(401, &quot;Go away!&quot;);</code></pre></div>
+    
+<h1 id="filters" class="anchor">Filters</h1>
+
+<p>Before-filters are evaluated <i>before each request</i>, and can read the request and read/modify the response. <br>To stop execution, use halt:</p>
+
+<div class="code-snippet"><pre><code class="language-java">before((request, response) -&gt; {
+    boolean authenticated;
+    // ... check if authenticated
+    if (!authenticated) {
+        halt(401, &quot;You are not welcome here&quot;);
+    }
+});</code></pre></div>
+
+<p>After-filters are evaluated <i>after each request</i>, and can read the request and read/modify the response:</p>
+
+<div class="code-snippet"><pre><code class="language-java">after((request, response) -&gt; {
+    response.header(&quot;foo&quot;, &quot;set by after filter&quot;);
+});</code></pre></div>
+
+<p>Filters optionally take a pattern, causing them to be evaluated only if the request path matches that pattern:</p>
+
+<div class="code-snippet"><pre><code class="language-java">before(&quot;/protected/*&quot;, (request, response) -&gt; {
+    // ... check if authenticated
+    halt(401, &quot;Go Away!&quot;);
+});</code></pre></div>
+    
+<h1 id="redirects" class="anchor">Redirects</h1>
+<p>You can trigger a browser redirect with the redirect helper method:</p>
+
+<div class="code-snippet"><pre><code class="language-java">response.redirect(&quot;/bar&quot;);</code></pre></div>
+<p>You can also trigger a browser redirect with specific http 3XX status code:</p>
+
+<div class="code-snippet"><pre><code class="language-java">response.redirect(&quot;/bar&quot;, 301); // moved permanently</code></pre></div>
+    
+<h1 id="exception-mapping" class="anchor">Exception Mapping</h1>
+
+<p>To handle exceptions of a configured type for all routes and filters:</p>
+
+<div class="code-snippet"><pre><code class="language-java">get(&quot;/throwexception&quot;, (request, response) -&gt; {
+    throw new NotFoundException();
+});
+
+exception(NotFoundException.class, (e, request, response) -&gt; {
+    response.status(404);
+    response.body(&quot;Resource not found&quot;);
+});</code></pre></div>
+    
+<h1 id="static-files" class="anchor">Static Files</h1>
+<p>
+    You can assign a folder in the classpath serving static files with the staticFileLocation method.
+    Note that the public directory name is not included in the URL.<br>
+    A file <strong>/public/css/style.css</strong> is made available as <strong>http://{host}:{port}/css/style.css</strong>
+</p>
+
+<div class="code-snippet"><pre><code class="language-java">staticFileLocation(&quot;/public&quot;); // Static files</code></pre></div>
+
+<p>You can also assign an external folder (a folder not in the classpath) to serve static files by using the externalStaticFileLocation method.</p>
+
+<div class="code-snippet"><pre><code class="language-java">externalStaticFileLocation(&quot;/var/www/public&quot;); // Static files</code></pre></div>
+    
+<h1 id="response-transformer" class="anchor">ResponseTransformer</h1>
+
+<p>
+    Mapped routes that transforms the output from the handle method.
+    This is done by extending the ResponseTransformer and pass this to the mapping method.
+    Example Of a route transforming output to JSON using Gson:
+</p>
+
+<div class="code-snippet"><pre><code class="language-java">import com.google.gson.Gson;
+
+public class JsonTransformer implements ResponseTransformer {
+
+    private Gson gson = new Gson();
+
+    @Override
+    public String render(Object model) {
+        return gson.toJson(model);
+    }
+
+}</code></pre></div>
+<p>and how it is used (MyMessage is a bean with one member 'message'):</p>
+
+<div class="code-snippet"><pre><code class="language-java">get(&quot;/hello&quot;, &quot;application/json&quot;, (request, response) -&gt; {
+    return new MyMessage(&quot;Hello World&quot;);
+}, new JsonTransformer());</code></pre></div>
+
+<p>You can also use Java 8 method references, since ResponseTransformer is an interface with one method:</p>
+
+<div class="code-snippet"><pre><code class="language-java">Gson gson = new Gson();
+get(&quot;/hello&quot;, (request, response) -&gt; new MyMessage(&quot;Hello World&quot;), gson::toJson);</code></pre></div>
+    
+<h1 id="views-templates" class="anchor">Views and Templates</h1>
+<p>A TemplateViewRoute is built up by a path (for url-matching) and the template engine holding the implementation of the 'render' method. Instead of returning the result of calling toString() as body the TemplateViewRoute returns the result of calling render method.</p>
+
+<p>The primary purpose of this kind of Route is to provide a way to create generic and reusable components for rendering output using a Template Engine.<br><br></p>
+        
+
+<h2 id="freemarker" class="anchor">Freemarker</h2>
+<p>Renders objects to HTML using the Freemarker template engine.</p>
+<p>Maven dependency:</p>
+
+<div class="code-snippet"><pre><code class="language-markup">&lt;dependency&gt;
+    &lt;groupId&gt;com.sparkjava&lt;/groupId&gt;
+    &lt;artifactId&gt;spark-template-freemarker&lt;/artifactId&gt;
+    &lt;version&gt;2.3&lt;/version&gt;
+&lt;/dependency&gt;</code></pre></div>
+<div class="force-up">
+    <p>Source and example on <a target="blank" href="https://github.com/perwendel/spark-template-engines/tree/master/spark-template-freemarker">GitHub</a>
+</div>
+        
+
+<h2 id="mustache" class="anchor">Mustache</h2>
+<p>Renders objects to HTML using the Mustache template engine.</p>
+<p>Maven dependency:</p>
+
+<div class="code-snippet"><pre><code class="language-markup">&lt;dependency&gt;
+    &lt;groupId&gt;com.sparkjava&lt;/groupId&gt;
+    &lt;artifactId&gt;spark-template-mustache&lt;/artifactId&gt;
+    &lt;version&gt;2.3&lt;/version&gt;
+&lt;/dependency&gt;</code></pre></div>
+<div class="force-up">
+    <p>Source and example on <a target="blank" href="https://github.com/perwendel/spark-template-engines/tree/master/spark-template-mustache">GitHub</a>
+</div>
+        
+
+<h2 id="velocity" class="anchor">Velocity</h2>
+<p>Renders objects to HTML using the Velocity template engine.</p>
+<p>Maven dependency:</p>
+
+<div class="code-snippet"><pre><code class="language-markup">&lt;dependency&gt;
+    &lt;groupId&gt;com.sparkjava&lt;/groupId&gt;
+    &lt;artifactId&gt;spark-template-velocity&lt;/artifactId&gt;
+    &lt;version&gt;2.3&lt;/version&gt;
+&lt;/dependency&gt;</code></pre></div>
+<div class="force-up">
+    <p>Source and example on <a target="blank" href="https://github.com/perwendel/spark-template-engines/tree/master/spark-template-velocity">GitHub</a>
+</div>
+        
+
+<h2 id="thymeleaf" class="anchor">Thymeleaf</h2>
+<p>Renders objects to HTML using the Thymeleaf template engine.</p>
+<p>Maven dependency:</p>
+
+<div class="code-snippet"><pre><code class="language-markup">&lt;dependency&gt;
+    &lt;groupId&gt;com.sparkjava&lt;/groupId&gt;
+    &lt;artifactId&gt;spark-template-thymeleaf&lt;/artifactId&gt;
+    &lt;version&gt;2.3&lt;/version&gt;
+&lt;/dependency&gt;</code></pre></div>
+<div class="force-up">
+    <p>Source and example on <a target="blank" href="https://github.com/perwendel/spark-template-engines/tree/master/spark-template-thymeleaf">GitHub</a>
+</div>
+        
+
+<h2 id="handlebars" class="anchor">Handlebars</h2>
+<p>Renders objects to HTML using the Handlebars template engine.</p>
+<p>Maven dependency:</p>
+
+<div class="code-snippet"><pre><code class="language-markup">&lt;dependency&gt;
+    &lt;groupId&gt;com.sparkjava&lt;/groupId&gt;
+    &lt;artifactId&gt;spark-template-handlebars&lt;/artifactId&gt;
+    &lt;version&gt;2.3&lt;/version&gt;
+&lt;/dependency&gt;</code></pre></div>
+<div class="force-up">
+    <p>Source and example on <a target="blank" href="https://github.com/perwendel/spark-template-engines/tree/master/spark-template-handlebars">GitHub</a>
+</div>
+        
+
+<h2 id="jade" class="anchor">Jade</h2>
+<p>Renders objects to HTML using the Jade template engine.</p>
+<p>Maven dependency:</p>
+
+<div class="code-snippet"><pre><code class="language-markup">&lt;dependency&gt;
+    &lt;groupId&gt;com.sparkjava&lt;/groupId&gt;
+    &lt;artifactId&gt;spark-template-jade&lt;/artifactId&gt;
+    &lt;version&gt;2.3&lt;/version&gt;
+&lt;/dependency&gt;</code></pre></div>
+<div class="force-up">
+    <p>Source and example on <a target="blank" href="https://github.com/perwendel/spark-template-engines/tree/master/spark-template-jade">GitHub</a>
+</div>
+        
+
+<h2 id="jetbrick" class="anchor">Jetbrick</h2>
+<p>Renders objects to HTML using the Jetbrick template engine.</p>
+<p>Maven dependency:</p>
+
+<div class="code-snippet"><pre><code class="language-markup">&lt;dependency&gt;
+    &lt;groupId&gt;com.sparkjava&lt;/groupId&gt;
+    &lt;artifactId&gt;spark-template-jetbrick&lt;/artifactId&gt;
+    &lt;version&gt;2.3&lt;/version&gt;
+&lt;/dependency&gt;</code></pre></div>
+<div class="force-up">
+    <p>Source and example on <a target="blank" href="https://github.com/perwendel/spark-template-engines/tree/master/spark-template-jetbrick">GitHub</a>
+</div>
+        
+
+<h2 id="pebble" class="anchor">Pebble</h2>
+<p>Renders objects to HTML using the Pebble template engine.</p>
+<p>Maven dependency:</p>
+
+<div class="code-snippet"><pre><code class="language-markup">&lt;dependency&gt;
+    &lt;groupId&gt;com.sparkjava&lt;/groupId&gt;
+    &lt;artifactId&gt;spark-template-pebble&lt;/artifactId&gt;
+    &lt;version&gt;2.3&lt;/version&gt;
+&lt;/dependency&gt;</code></pre></div>
+<div class="force-up">
+    <p>Source and example on <a target="blank" href="https://github.com/perwendel/spark-template-engines/tree/master/spark-template-pebble">GitHub</a>
+</div>
+        
+
+<h2 id="water" class="anchor">Water</h2>
+<p>Renders objects to HTML using the Water template engine.</p>
+<p>Maven dependency:</p>
+
+<div class="code-snippet"><pre><code class="language-markup">&lt;dependency&gt;
+    &lt;groupId&gt;com.sparkjava&lt;/groupId&gt;
+    &lt;artifactId&gt;spark-template-water&lt;/artifactId&gt;
+    &lt;version&gt;2.3&lt;/version&gt;
+&lt;/dependency&gt;</code></pre></div>
+<div class="force-up">
+    <p>Source and example on <a target="blank" href="https://github.com/perwendel/spark-template-engines/tree/master/spark-template-water">GitHub</a>
+</div>
+    
+<h1 id="embedded-webserver" class="anchor">Embedded web server</h1>
+<p>
+    Standalone Spark runs on an embedded <a href="http://eclipse.org/jetty/" target="_blank">Jetty</a> web server.
+</p>
+<br>
+        
+<h2 id="port" class="anchor">Port</h2>
+<p>By default, Spark runs on port 4567. If you want to set another port use <i>port</i>. This has to be done before using routes and filters:</p>
+
+<div class="code-snippet"><pre><code class="language-java">port(9090); // Spark will run on port 9090</code></pre></div>
+        
+<h2 id="secure" class="anchor">Secure</h2>
+<p>
+    You can set the connection to be secure via the <em>secure</em> method.
+    This has to be done before any route mapping:
+</p>
+
+<div class="code-snippet"><pre><code class="language-java">secure(keystoreFile, keystorePassword, truststoreFile, truststorePassword);</code></pre></div>
+        
+<h2 id="threadpool" class="anchor">ThreadPool</h2>
+<p>You can set the maximum number of threads easily:</p>
+
+<div class="code-snippet"><pre><code class="language-java">int maxThreads = 8;
+threadPool(maxThreads);</code></pre></div>
+<p>You can also configure the minimum numbers of threads, and the idle timeout:</p>
+
+
+<div class="code-snippet"><pre><code class="language-java">int maxThreads = 8;
+int minThreads = 2;
+int timeOutMillis = 30000;
+threadPool(maxThreads, minThreads, timeOutMillis);</code></pre></div>
+
+        
+<h1 id="awaitinit" class="anchor">Waiting for Initialization</h1>
+<p>
+    You can use the method <em>awaitInitialization()</em> to check if the server is ready to handle requests.
+    This is usually done in a separate thread, for example to run a health check module after your server has started.
+    <br>
+    The method causes the current thread to wait until the embedded Jetty server has been initialized.
+    Initialization is triggered by defining routes and/or filters.
+    Hence, if you're using just one thread don't put this before you define your routes and/or filters.
+
+</p>
+
+<div class="code-snippet"><pre><code class="language-java">awaitInitialization(); // Wait for server to be initialized</code></pre></div>
+
+        
+<h1 id="websockets" class="anchor">WebSockets</h1>
+<p>
+    WebSockets provide a protocol full-duplex communication channel over a single TCP connection,
+    meaning you can send message back and forth over the same connection.
+</p>
+
+<p>
+    WebSockets only works with the embedded Jetty server, and must be defined before regular HTTP routes.
+    To create a WebSocket route, you need to provide a path and a handler class:</p>
+
+
+<div class="code-snippet"><pre><code class="language-java">webSocket(&quot;/echo&quot;, EchoWebSocket.class);
+init(); // Needed if you don&#x27;t define any HTTP routes after your WebSocket routes</code></pre></div>
+
+
+<div class="code-snippet"><pre><code class="language-java">import org.eclipse.jetty.websocket.api.Session;
+import org.eclipse.jetty.websocket.api.annotations.*;
+import java.io.IOException;
+
+@WebSocket
+public class EchoWebSocket {
+    private Session session;
+
+    @OnWebSocketConnect
+    public void connected(Session session) {
+        this.session = session;
+    }
+
+    @OnWebSocketClose
+    public void closed(int statusCode, String reason) {
+        this.session = null;
+    }
+
+    @OnWebSocketMessage
+    public void message(String message) throws IOException {
+        System.out.println(&quot;Got: &quot; + message);   // Print message
+        session.getRemote().sendString(message); // and send it back
+    }
+}</code></pre></div>
+    
+<h1 id="other-webserver" class="anchor">Other web server</h1>
+<p>
+    To run Spark on a web server (instead of the embedded jetty server),
+    an implementation of the interface spark.servlet.SparkApplication is needed.
+    You have to initialize the routes in the init() method,
+    and the following filter has to be configured in your web.xml:
+</p>
+
+
+<div class="code-snippet"><pre><code class="language-markup">&lt;filter&gt;
+    &lt;filter-name&gt;SparkFilter&lt;/filter-name&gt;
+    &lt;filter-class&gt;spark.servlet.SparkFilter&lt;/filter-class&gt;
+    &lt;init-param&gt;
+        &lt;param-name&gt;applicationClass&lt;/param-name&gt;
+        &lt;param-value&gt;com.company.YourApplication&lt;/param-value&gt;
+    &lt;/init-param&gt;
+&lt;/filter&gt;
+
+&lt;filter-mapping&gt;
+    &lt;filter-name&gt;SparkFilter&lt;/filter-name&gt;
+    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;</code></pre></div>
+    
+<h1 id="gzip" class="anchor">GZIP</h1>
+<p>GZIP is done automatically if it's in the request/response headers.<br><br></p>
+    
+<h1 id="javadoc" class="anchor">Javadoc</h1>
+
+<p>After getting the source from <a target="_blank" href="https://github.com/perwendel/spark">GitHub</a> run:</p>
+
+
+<div class="code-snippet"><pre><code class="language-java">mvn javadoc:javadoc</code></pre></div>
+
+<div class="force-up"><p>The result is put in /target/site/apidocs</p></div>
+
+    
+<h1 id="examples" class="anchor">Examples and Tutorials</h1>
+
+<h2>Examples</h2>
+<p>Examples can be found on the project's page on <a target="_blank" href="https://github.com/perwendel/spark/blob/master/README.md#examples">GitHub</a></p>
+
+<h2>Text Tutorials</h2>
+<p>Tutorials can be found on the <a target="_blank" href="https://sparktutorials.github.io/">Spark tutorial page</a></p>
+
+<h2>Video Tutorials</h2>
+<p>
+    <a href="https://www.learnhowtoprogram.com/table-of-contents" target="_blank">learnhowtoprogram.com</a> have created a lot of Spark video tutorials as part of a beginners course in Java web development.
+    These tutorials can be found <a target="_blank" href="https://sparktutorials.github.io/2015/08/04/spark-video-tutorials.html">here</a>.
+</p>
+
+</section>
+
+    <script type="text/javascript" src="/assets/javascripts/smoothscroll.min.js"></script>
+
+        <script type="text/javascript" src="/assets/javascripts/prism.js"></script>
+
+        <footer>
+            Spark Framework is a free and open source Java Web Framework, released under the <a href="https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)" target="_blank">Apache 2 License</a>
+            &nbsp;|&nbsp; <a href="/contact.html">Contact</a>
+            &nbsp;|&nbsp; <a href="/contact.html#team">Team</a>
+        </footer>
+
+        <script>document.getElementById(document.URL.split("#")[0].slice(document.URL.lastIndexOf('/')+1, -5)+"-li").className = "active";</script>
+
+    </body>
+
+</html>
