@@ -554,29 +554,34 @@ threadPool(maxThreads, minThreads, timeOutMillis);</code></pre></div>
 init(); // Needed if you don&#x27;t define any HTTP routes after your WebSocket routes</code></pre></div>
 
 
-<div class="code-snippet"><pre><code class="language-java">import org.eclipse.jetty.websocket.api.Session;
+<div class="code-snippet"><pre><code class="language-java">import org.eclipse.jetty.websocket.api.*;
 import org.eclipse.jetty.websocket.api.annotations.*;
-import java.io.IOException;
+import java.io.*;
+import java.util.*;
+import java.util.concurrent.*;
 
 @WebSocket
 public class EchoWebSocket {
-    private Session session;
+
+    // Store sessions if you want to, for example, broadcast a message to all users
+    private static final Queue&lt;Session&gt; sessions = new ConcurrentLinkedQueue&lt;&gt;();
 
     @OnWebSocketConnect
     public void connected(Session session) {
-        this.session = session;
+        sessions.add(session);
     }
 
     @OnWebSocketClose
-    public void closed(int statusCode, String reason) {
-        this.session = null;
+    public void closed(Session session, int statusCode, String reason) {
+        sessions.remove(session);
     }
 
     @OnWebSocketMessage
-    public void message(String message) throws IOException {
+    public void message(Session session, String message) throws IOException {
         System.out.println(&quot;Got: &quot; + message);   // Print message
         session.getRemote().sendString(message); // and send it back
     }
+
 }</code></pre></div>
     
 <h1 id="other-webserver" class="anchor">Other web server</h1>
