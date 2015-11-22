@@ -608,7 +608,26 @@ public class EchoWebSocket {
 &lt;/filter-mapping&gt;</code></pre></div>
     
 <h1 id="gzip" class="anchor">GZIP</h1>
-<p>GZIP is done automatically if it's in the request/response headers.<br><br></p>
+<p>
+    GZIP is done automatically if it's in both the request and the response headers.
+    This usually only means that you have to set it in your response headers.
+</p>
+<p>
+    If you want to GZIP a single response, you can add it manually to your route:
+</p>
+
+
+<div class="code-snippet"><pre><code class="language-java">get(&quot;/some-path&quot;, (request, response) -&gt; {
+    // code for your get
+    response.header(&quot;Content-Encoding&quot;, &quot;gzip&quot;);
+});</code></pre></div>
+
+<p>If you want to GZIP everything, you can use an after-filter</p>
+
+<div class="code-snippet"><pre><code class="language-java">after((request, response) -&gt; {
+    response.header(&quot;Content-Encoding&quot;, &quot;gzip&quot;);
+});</code></pre></div>
+
     
 <h1 id="javadoc" class="anchor">Javadoc</h1>
 
