@@ -5,7 +5,7 @@ staticFiles.expireTime(600);</code></pre></div><h2>Convenience API for redirects
 redirect.post(&quot;/hi&quot;, &quot;/hello&quot;);
 redirect.put(&quot;/hi&quot;, &quot;/hello&quot;);
 redirect.delete(&quot;/hi&quot;, &quot;/hello&quot;);
-redirect.any(&quot;/hi&quot;, &quot;/hello&quot;);</code></pre></div><h2>Instance API</h2><p>The instance API is intended for advanced users, so the official documentation will still use the static api. Everything normally available on the Spark singleton is now available on objects you can instantiate:</p><div class="code-snippet"><pre><code class="language-java">// When using the instance API, the Service variable should
+redirect.any(&quot;/hi&quot;, &quot;/hello&quot;);</code></pre></div><h2>Instance API</h2><p>The instance API is intended for advanced users, so the official documentation will still use the static api. Everything normally available in the static API is now available on objects you can instantiate:</p><div class="code-snippet"><pre><code class="language-java">// When using the instance API, the Service variable should
 // be called &#x27;http&#x27; for the semantic to make sense
 // ie: http.get(&quot;...&quot;), http.post(&quot;...&quot;), etc
 
