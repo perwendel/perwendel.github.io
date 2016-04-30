@@ -14,7 +14,6 @@ module.exports = function(grunt) {
                     '../download.html'      : '../download.html',
                     '../documentation.html' : '../documentation.html',
                     '../contact.html'       : '../contact.html',
-                    '../news.html'          : '../news.html',
                     '../404.html'           : '../404.html',
 
                 }
