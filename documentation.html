@@ -36,29 +36,8 @@ get(&quot;/hello/:name&quot;, (request, response) -&gt; {
 // request.splat()[0] is &#x27;hello&#x27; and request.splat()[1] &#x27;world&#x27;
 get(&quot;/say/*/to/*&quot;, (request, response) -&gt; {
     return &quot;Number of splat parameters: &quot; + request.splat().length;
-});</code></pre></div><h2>Referencing routes</h2><p>There are many different ways you can reference a handler in Spark:</p><div class="code-snippet"><pre><code class="language-java">//using route fields
-get(&quot;/&quot;, sayHello);
-
-static Route sayHello = (Request req, Response res) -&gt; {
-    return &quot;Hello&quot;;
-};</code></pre></div><div class="code-snippet"><pre><code class="language-java">//using method references
-get(&quot;/&quot;, ClassName::sayHello); //ClassName = name of class containing sayHello method
-
-static String sayHello(Request req, Response res) {
-    return &quot;Hello&quot;;
-}</code></pre></div><div class="code-snippet"><pre><code class="language-java">//class implementing Route
-get(&quot;/&quot;, new SayHelloRoute());
-
-class SayHelloRoute implements Route {
-    @Override
-    public Object handle(Request request, Response response) throws Exception {
-        return &quot;Hello&quot;;
-    }
-}</code></pre></div><h2>Route overview</h2>In Spark 2.4 we added an experimental feature, the Route Overview:<div class="code-snippet"><pre><code class="language-java">//default location, calls get(&quot;/debug/routeoverview/&quot;, routeOverview)
-enableRouteOverview();
-
-//custom location, calls get(&quot;/my/overview/path&quot;, routeOverview)
-enableRouteOverview(&quot;/my/overview/path&quot;);</code></pre></div><p><em>Note: This feature has a lot of reflection magic, it might not work with some JDK versions</em></p><h1 id="request" class="anchor">Request</h1><p>In the handle method request information and functionality is provided by the request parameter:</p><div class="code-snippet"><pre><code class="language-java">request.attributes();             // the attributes list
+});</code></pre></div><h2>Route overview</h2>In Spark 2.4 we added an experimental feature, the Route Overview:<div class="code-snippet"><pre><code class="language-java">enableRouteOverview(); // overview available at /debug/routeoverview/
+enableRouteOverview(&quot;/my/overview/path&quot;); // available at specified path</code></pre></div><p style="margin-top:-20px"><em>Note: This feature has a lot of reflection magic, it might not work perfectly with some JDK versions.</em></p><h1 id="request" class="anchor">Request</h1><p>In the handle method request information and functionality is provided by the request parameter:</p><div class="code-snippet"><pre><code class="language-java">request.attributes();             // the attributes list
 request.attribute(&quot;foo&quot;);         // value of foo attribute
 request.attribute(&quot;A&quot;, &quot;V&quot;);      // sets value of attribute A to V
 request.body();                   // request body sent by the client
