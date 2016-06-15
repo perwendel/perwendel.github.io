@@ -36,8 +36,8 @@ get(&quot;/hello/:name&quot;, (request, response) -&gt; {
 // request.splat()[0] is &#x27;hello&#x27; and request.splat()[1] &#x27;world&#x27;
 get(&quot;/say/*/to/*&quot;, (request, response) -&gt; {
     return &quot;Number of splat parameters: &quot; + request.splat().length;
-});</code></pre></div><h2>Route overview</h2>In Spark 2.4 we added an experimental feature, the Route Overview:<div class="code-snippet"><pre><code class="language-java">enableRouteOverview(); // overview available at /debug/routeoverview/
-enableRouteOverview(&quot;/my/overview/path&quot;); // available at specified path</code></pre></div><p style="margin-top:-20px"><em>Note: This feature has a lot of reflection magic, it might not work perfectly with some JDK versions.</em></p><h1 id="request" class="anchor">Request</h1><p>Request information and functionality is provided by the request parameter:</p><div class="code-snippet"><pre><code class="language-java">request.attributes();             // the attributes list
+});</code></pre></div><h2>Route overview</h2>In Spark 2.4 we added an experimental feature, the Route Overview:<div class="code-snippet"><pre><code class="language-java">RouteOverview.enableRouteOverview(); // overview available at /debug/routeoverview/
+RouteOverview.enableRouteOverview(&quot;/my/overview/path&quot;); // available at specified path</code></pre></div><p style="margin-top:-20px"><em>Note: This feature has a lot of reflection magic, it might not work perfectly with some JDK versions.</em></p><h1 id="request" class="anchor">Request</h1><p>Request information and functionality is provided by the request parameter:</p><div class="code-snippet"><pre><code class="language-java">request.attributes();             // the attributes list
 request.attribute(&quot;foo&quot;);         // value of foo attribute
 request.attribute(&quot;A&quot;, &quot;V&quot;);      // sets value of attribute A to V
 request.body();                   // request body sent by the client
