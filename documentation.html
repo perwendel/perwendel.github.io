@@ -10,7 +10,7 @@ public class HelloWorld {
     public static void main(String[] args) {
         get(&quot;/hello&quot;, (req, res) -&gt; &quot;Hello World&quot;);
     }
-}</code></pre></div><p><strong>3:</strong> Run and view:</p><div class="code-snippet"><pre><code class="language-markup">http://localhost:4567/hello</code></pre></div><div class="force-up"><p>To see more console output from Spark (debug info, etc), you have to <a href="#add-a-logger">add a logger</a> to your project.</p></div><h1 id="stopping-the-server" class="anchor">Stopping the Server</h1><p>By calling the stop() method the server is stopped and all routes are cleared.</p><div class="code-snippet"><pre><code class="language-java">stop();</code></pre></div><h1 id="routes" class="anchor">Routes</h1><p>The main building block of a Spark application is a set of routes. A route is made up of three simple pieces:</p><ul class="code-list"><li>A <strong>verb</strong> (get, post, put, delete, head, trace, connect, options)</li><li>A <strong>path</strong> (/hello, /users/:name)</li><li>A <strong>callback</strong> (request, response) -> { }</li></ul><p>Routes are matched in the order they are defined. The first route that matches the request is invoked.</p><div class="code-snippet"><pre><code class="language-java">get(&quot;/&quot;, (request, response) -&gt; {
+}</code></pre></div><p><strong>3:</strong> Run and view:</p><div class="code-snippet"><pre><code class="language-markup">http://localhost:4567/hello</code></pre></div><div class="force-up"><p>To see more console output from Spark (debug info, etc), you have to <a href="#add-a-logger">add a logger</a> to your project.</p></div><h1 id="stopping-the-server" class="anchor">Stopping the Server</h1><p>By calling the stop() method the server is stopped and all routes are cleared.</p><div class="code-snippet"><pre><code class="language-java">stop();</code></pre></div><h2>What about starting the server?</h2><p>The server is automatically started when you do something that requires the server to be started (i.e. declaring a route or setting the port). You can also manually start the server by calling <b>init()</b>.</p><h1 id="routes" class="anchor">Routes</h1><p>The main building block of a Spark application is a set of routes. A route is made up of three simple pieces:</p><ul class="code-list"><li>A <strong>verb</strong> (get, post, put, delete, head, trace, connect, options)</li><li>A <strong>path</strong> (/hello, /users/:name)</li><li>A <strong>callback</strong> (request, response) -> { }</li></ul><p>Routes are matched in the order they are defined. The first route that matches the request is invoked.<br>Always statically import Spark methods to ensure good readability:</p><div class="code-snippet"><pre><code class="language-java">get(&quot;/&quot;, (request, response) -&gt; {
     // Show something
 });
 
@@ -36,6 +36,18 @@ get(&quot;/hello/:name&quot;, (request, response) -&gt; {
 // request.splat()[0] is &#x27;hello&#x27; and request.splat()[1] &#x27;world&#x27;
 get(&quot;/say/*/to/*&quot;, (request, response) -&gt; {
     return &quot;Number of splat parameters: &quot; + request.splat().length;
+});</code></pre></div><h2>Path groups</h2><p>If you have a lot of routes, it can be helpful to separate them into groups. This can be done by calling the path()-method, which takes a <b>String prefix</b> and gives you a scope to declare routes and filters (or nested paths) in:</p><div class="code-snippet"><pre><code class="language-java">path(&quot;/api&quot;, () -&gt; {
+    before((q, a) -&gt; log.info(&quot;Received api call&quot;));
+    path(&quot;/email&quot;, () -&gt; {
+        post(&quot;/add&quot;,       EmailApi.addEmail);
+        put(&quot;/change&quot;,     EmailApi.changeEmail);
+        delete(&quot;/remove&quot;,  EmailApi.deleteEmail);
+    });
+    path(&quot;/username&quot;, () -&gt; {
+        post(&quot;/add&quot;,       UserApi.addUsername);
+        put(&quot;/change&quot;,     UserApi.changeUsername);
+        delete(&quot;/remove&quot;,  UserApi.deleteUsername);
+    });
 });</code></pre></div><h2>Route overview</h2>In Spark 2.4 we added an experimental feature, the Route Overview:<div class="code-snippet"><pre><code class="language-java">RouteOverview.enableRouteOverview(); // overview available at /debug/routeoverview/
 RouteOverview.enableRouteOverview(&quot;/my/overview/path&quot;); // available at specified path</code></pre></div><p style="margin-top:-20px"><em>Note: This feature has a lot of reflection magic, it might not work perfectly with some JDK versions.</em></p><h1 id="request" class="anchor">Request</h1><p>Request information and functionality is provided by the request parameter:</p><div class="code-snippet"><pre><code class="language-java">request.attributes();             // the attributes list
 request.attribute(&quot;foo&quot;);         // value of foo attribute
