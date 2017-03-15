@@ -37,7 +37,7 @@ get(&quot;/hello/:name&quot;, (request, response) -&gt; {
 get(&quot;/say/*/to/*&quot;, (request, response) -&gt; {
     return &quot;Number of splat parameters: &quot; + request.splat().length;
 });</code></pre></div><h2>Path groups</h2><p>If you have a lot of routes, it can be helpful to separate them into groups. This can be done by calling the path()-method, which takes a <b>String prefix</b> and gives you a scope to declare routes and filters (or nested paths) in:</p><div class="code-snippet"><pre><code class="language-java">path(&quot;/api&quot;, () -&gt; {
-    before((q, a) -&gt; log.info(&quot;Received api call&quot;));
+    before(&quot;/*&quot;, (q, a) -&gt; log.info(&quot;Received api call&quot;));
     path(&quot;/email&quot;, () -&gt; {
         post(&quot;/add&quot;,       EmailApi.addEmail);
         put(&quot;/change&quot;,     EmailApi.changeEmail);
