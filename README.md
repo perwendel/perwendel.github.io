@@ -1,4 +1,2 @@
-spark-web-page
-==============
-
-The HTML and static resources for [sparkjava.com](http://sparkjava.com).
+# sparktutorials.github.io
+This repo contains the source code for [sparkjava.com](http://sparkjava.com), as well as the old tutorial page, [https://sparktutorials.github.io](https://sparktutorials.github.io)

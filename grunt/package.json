@@ -1,8 +1,0 @@
-{
-  "name": "sparkjava-webpage",
-  "version": "0.1.0",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-htmlmin": "^0.6.0"
-  }
-}
