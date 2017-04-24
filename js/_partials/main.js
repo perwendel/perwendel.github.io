@@ -15,6 +15,13 @@ smoothScroll.init({
     callback: function ( anchor, toggle ) {} // Function to run after scrolling
 });
 
+// scroll to current element on load
+if (window.location.hash) {
+    setTimeout(function() {
+       window.scrollTo(0, window.scrollY - 110); 
+    }, 0);
+}
+
 // trim blank lines around code
 var codeBlocks = document.getElementsByTagName("code");
 for (var i = 0; i < codeBlocks.length; i++) {
