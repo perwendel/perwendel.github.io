@@ -614,7 +614,7 @@ after((request, response) -> {
 ## javadoc.io
 Javadoc is available at [javadoc.io](http://javadoc.io/doc/com.sparkjava/spark-core).
 
-## Built it yourself
+## Build it yourself
 After getting the source from [GitHub](https://github.com/perwendel/spark) run:
 
 ~~~bash
