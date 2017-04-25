@@ -15,3 +15,44 @@ pre[class*="language-"] {
         font-size: 13px;
     }
 }
+
+// Toolbar
+
+.highlighter-rouge {
+    position: relative;
+    overflow: auto;
+}
+
+pre.highlight {
+    margin: 0;
+}
+    
+pre.code-toolbar {
+    position: initial;
+}
+
+pre.code-toolbar > .toolbar {
+    opacity: 1;
+    transition: none;
+    top: 0px;
+    right: 0px;
+}
+
+pre.code-toolbar > .toolbar a {
+    font-size: 13px;
+	padding: 1px 6px 3px;
+}
+
+pre.code-toolbar > .toolbar a,
+pre.code-toolbar > .toolbar button,
+pre.code-toolbar > .toolbar span {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #30312a;
+    box-shadow: none;
+    border-radius: 0 5px 0 5px;
+    color: #888;
+    border: 1px solid #444;
+    border-top: 0;
+    border-right: 0;
+}
