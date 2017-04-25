@@ -42,3 +42,18 @@ We're usually pretty friendly, but questions like "How do I add Spark to Maven",
     imgFile = "david.png"
 %}
 </div>
+
+### Top contributors
+
+<ul class="contributors">
+{% for c in site.data.contributors %}
+  {%if c.login != "perwendel" and c.login != "tipsy" and c.login != "sonyperwendel" %}
+  <li>
+    <a href="{{c.html_url}}">
+        <img src="{{ c.avatar_url }}" alt="{{ c.login }}">
+        <span>{{ c.login }} ({{ c.contributions }})</span>
+    </a>
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>
