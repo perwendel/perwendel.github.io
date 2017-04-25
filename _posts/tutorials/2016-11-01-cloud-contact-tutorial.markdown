@@ -6,8 +6,9 @@ date: 2016-11-01 11:11:11
 comments: true
 permalink: /tutorials/cloud-contact-app
 github: https://github.com/SeunMatt/cloudcontact
+summarytitle: MongoDB example
 summary: >
- Learn how to create a full webapp for syncing your contact list, using Heroku, MongoDB and SRP authentication. 
+ Learn how to create a full webapp for syncing your contact list, using Spark, Heroku, MongoDB and SRP authentication. 
 ---
 
 Background

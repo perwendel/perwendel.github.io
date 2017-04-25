@@ -5,6 +5,7 @@ author: <a href="https://www.linkedin.com/in/davidaase" target="_blank">David Å
 date: 2015-04-02 11:34:52
 comments: true
 permalink: /tutorials/maven-setup
+summarytitle: Maven setup
 summary: >
  In this tutorial you will learn how to set up a Spark project using Maven. It's aimed at Java beginners, and will show you how to set up your project in IntelliJ IDEA and Eclipse.
 ---

@@ -5,7 +5,8 @@ author: <a href="http://tomassetti.me" target="_blank">Federico Tomassetti</a>
 date:   2015-04-03 10:34:52
 comments: true
 permalink: /tutorials/reducing-java-boilerplate
-summary: This tutorial will teach you how to create a minimal RESTful application for a blog, using JSON to transfer data. You will learn about setting up a complete Spark project, using Jackson and Lombok for awesome descriptive exchange objects.
+summarytitle: Reducing java boilerplate
+summary: This tutorial will teach you how to create a minimal RESTful application for a blog, using JSON to transfer data. You will learn about setting up a complete Spark project with Jackson and Lombok.
 ---
 
 ## Getting started with Spark: Create a lightweight RESTful application in Java

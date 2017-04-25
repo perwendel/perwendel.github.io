@@ -6,8 +6,9 @@ date: 2015-08-24 11:11:11
 comments: true
 permalink: /tutorials/heroku
 github: https://github.com/tipsy/spark-heroku-example
+summarytitle: Deploying to Heroku
 summary: >
- In this tutorial you will learn how to deploy a Hello World application on Heroku!
+ In this tutorial you will learn how to deploy a Spark Hello World application on Heroku!
 ---
 
 ## What is Heroku?

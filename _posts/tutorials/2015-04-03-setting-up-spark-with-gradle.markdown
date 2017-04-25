@@ -5,6 +5,7 @@ author: <a href="https://github.com/leonanluppi" target="_blank">Leonan Luppi</a
 date: 2015-04-03 10:24:03
 comments: true
 permalink: /tutorials/gradle-setup
+summarytitle: Gradle setup
 summary: >
  We will learn how to set up a Spark application using Gradle. For that we will use Eclipse Luna IDE and Gradle 2.5.
 ---

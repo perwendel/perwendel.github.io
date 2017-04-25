@@ -6,13 +6,8 @@ author: Matthias Lübken from <a href="https://giantswarm.io/" target="_blank">G
 comments: true
 permalink: /tutorials/docker
 github: https://github.com/giantswarm/sparkexample
-summary: > 
-  This tutorial provides a short and simple example on how to get started with Java development on Docker. 
-  <br>
-  Spark was chosen for the tutorial because it can <em>"get you started with minimal overhead and upfront knowledge".
-  </em> The tutorial is written by <a href="https://giantswarm.io/" target="_blank">GiantSwarm</a>'s&nbsp;</span>
-  Matthias Lübken and originally appeared on their 
-  <a href="http://blog.giantswarm.io/getting-started-with-java-development-on-docker" target="_blank">blog</a>.
+summarytitle: Docker setup
+summary: This tutorial provides a short and simple example on how to get started with Spark and Java development on Docker. 
 ---
 
 ## Background
