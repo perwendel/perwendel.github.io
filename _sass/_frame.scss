@@ -132,6 +132,20 @@ nav {
     }
 }
 
+@media (max-height: 850px) {
+    .right-menu {
+        font-size: 14px;
+    }
+}
+
+@media (max-height: 750px) {
+    .right-menu {
+        ul a {
+            margin: 0;
+        }
+    }
+}
+
 @media (max-width: 1200px) {
     #fork-me {
         display: none;
