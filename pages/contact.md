@@ -14,7 +14,7 @@ Follow us on [Twitter](https://twitter.com/sparkjava) to get the latest news, an
 Do you have a passion for Java and web frameworks? Do you want to work on one of the most popular Java web frameworks in the world? We're always looking for people to join Spark Framework. If you're interested in contributing, click on the "Fork me on Github" banner in the top right corner and start coding, or contact one of the team members to learn how you can help out.
 
 ### Found a vulnerability?
-Please try to email us. If this fails, follow [these steps](/news/#best-practice-for-reporting-vulnerabilities).
+Please try to email us. If this fails, follow [these steps](/news#best-practice-for-reporting-vulnerabilities).
 
 ## The Team
 If you have questions that can't be asked elsewhere, please contact the most appropriate team member.
