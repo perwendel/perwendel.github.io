@@ -1,0 +1,17 @@
+pre[class*="language-"] {
+    background: #30312a;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+	font-family: 'Fira Mono', monospace;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.smaller-code {
+    code[class*="language-"], 
+    pre[class*="language-"] {
+        font-size: 13px;
+    }
+}
