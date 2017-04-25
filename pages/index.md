@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Index
 rightmenu: false
 permalink: /
 ---

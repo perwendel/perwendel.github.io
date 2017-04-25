@@ -1,5 +1,4 @@
 # Site settings
-title: Spark Framework tutorials - Spark Java tutorials
 sparkversion: 2.5.5
 templateversion: 2.5.5
 description: > # > means to ignore newlines as long as indent is kept
