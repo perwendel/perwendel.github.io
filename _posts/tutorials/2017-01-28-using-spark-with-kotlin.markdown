@@ -66,7 +66,7 @@ Java8: `get("/path", (req, res) -> { ... });`
 <br>
 Kotlin: `get("/path") { req, res -> ...}`. 
 
-<p class="comment">The syntax `(){}` might look a little strange to Java programmers. Kotlin supports <a href="https://kotlinlang.org/docs/reference/lambdas.html#closures" target="_blank">trailing closures</a> and provides <a href="https://kotlinlang.org/docs/reference/grammar.html#semicolons" target="_blank">semicolon inference</a>. Simplified, this means you don't have to wrap closures in parentheses and end every statement with a semicolon.</p>
+The syntax `(){}` might look a little strange to Java programmers. Kotlin supports <a href="https://kotlinlang.org/docs/reference/lambdas.html#closures" target="_blank">trailing closures</a> and provides <a href="https://kotlinlang.org/docs/reference/grammar.html#semicolons" target="_blank">semicolon inference</a>. Simplified, this means you don't have to wrap closures in parentheses and end every statement with a semicolon.
 
 ## Creating a Spark/Kotlin CRUD microservice
 
