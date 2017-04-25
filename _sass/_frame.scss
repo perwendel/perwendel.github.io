@@ -1,3 +1,5 @@
+$spark-orange: #e88300;
+
 html {
     position: relative;
     min-height: 100%;
@@ -43,6 +45,7 @@ footer {
 }
 
 nav {
+    height: 80px;
     position: relative;
     #logo img {
         margin: 10px 0;
@@ -112,6 +115,9 @@ nav {
         margin: 0;
         list-style: none;
         padding: 0;
+        .active > a {
+            font-weight: 700;
+        }
         a {
             display: inline-block;
             padding: 1px 0;
