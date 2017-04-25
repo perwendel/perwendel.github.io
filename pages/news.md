@@ -11,7 +11,7 @@ Follow us on
 to get the latest news, and other Spark related content
 </div>
 
-<div class="right-menu" markdown="1">
+<div id="spy-nav" class="right-menu" markdown="1">
 * [Spark 2.6 released](#spark-26-released)
 * [Spark 2.5.2 vulnerability](#vulnerability)
 * [Spark 2.5 released](#spark-25-released)

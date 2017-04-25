@@ -5,7 +5,7 @@ rightmenu: true
 permalink: /documentation
 ---
 
-<div id="docs-nav" class="right-menu" markdown="1">
+<div id="spy-nav" class="right-menu" markdown="1">
 * [Getting Started](#getting-started)
 * [Stopping the Server](#stopping-the-server)
 * [Routes](#routes)

@@ -17,7 +17,7 @@ setTimeout(function() {
         callback: function ( anchor, toggle ) {} // Function to run after scrolling
     });
     gumshoe.init({ // https://github.com/cferdinandi/gumshoe (scrollspy) 
-        selector: '#docs-nav > ul > li > a', // Default link selector 
+        selector: '#spy-nav > ul > li > a', // Default link selector 
         selectorHeader: fixedHeaderSelector, // Fixed header selector 
         container: window, // The element to spy on scrolling in (must be a valid DOM Node)
         offset: offset, // Distance in pixels to offset calculations
