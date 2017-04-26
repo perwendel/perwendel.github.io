@@ -8,6 +8,7 @@ permalink: /tutorials/
 {% assign simpleTuts = (tutorials | where: "category" , "simple") %}
 {% assign intermediateTuts = (tutorials | where: "category" , "intermediate") %}
 
+<h1 class="no-margin-top">Tutorials</h1>
 <div class="tutorials-header" markdown="1">
 We recommend starting with either the [Maven setup](maven-setup) or [Gradle setup](gradle-setup) tutorial, then going through the [Basic webapp structure](application-structure) tutorial.
 
