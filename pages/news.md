@@ -6,7 +6,7 @@ permalink: /news
 ---
 
 <h1 class="no-margin-top">News</h1>
-Follow us on [Twitter](https://twitter.com/sparkjava) to get the latest news, and other Spark related content
+Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news, and other Spark related content.
 
 <div id="spy-nav" class="right-menu" markdown="1">
 * [Spark 2.6 released](#spark-26-released)

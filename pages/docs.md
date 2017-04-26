@@ -34,7 +34,10 @@ permalink: /documentation
 * [Examples/FAQ](#examples-and-faq)
 </div>
 
-<h1 id="getting-started" class="no-margin-top">Getting started</h1>
+<h1 class="no-margin-top">Documentation</h1>
+Documentation here is always for the latest version of Spark. We don't have the capacity to maintain separate docs for each version, but Spark is always backwards compatible.
+
+## Getting started
 
 **1:** Create a new maven project and add the dependency to your [POM.xml](http://maven.apache.org/pom.html):
 {% include macros/mavenDep.md %}
@@ -57,14 +60,14 @@ http://localhost:4567/hello
 
 To see more console output from Spark (debug info, etc), you have to [add a logger](#add-a-logger) to your project.
 
-# Stopping the Server
+## Stopping the Server
 By calling the stop() method the server is stopped and all routes are cleared.
 
 ~~~java
 stop();
 ~~~
 
-## Wait, what about starting the server?
+### Wait, what about starting the server?
 The server is automatically started when you do something that requires the server to be started (i.e. declaring a route or setting the port). You can also manually start the server by calling `init()`.
 
 You can specify what should happen if initialization fails: 
@@ -81,7 +84,7 @@ private Consumer<Exception> initExceptionHandler = (e) -> {
 };
 ~~~
 
-# Routes
+## Routes
 The main building block of a Spark application is a set of routes. A route is made up of three simple pieces:
 
 * A **verb** (get, post, put, delete, head, trace, connect, options)
@@ -132,7 +135,7 @@ get("/say/*/to/*", (request, response) -> {
 });
 ~~~
 
-## Path groups
+### Path groups
 If you have a lot of routes, it can be helpful to separate them into groups. This can be done by calling the `path()` method, which takes a `String prefix` and gives you a scope to declare routes and filters (or nested paths) in:
 
 ~~~java
@@ -151,7 +154,7 @@ path("/api", () -> {
 });
 ~~~
 
-# Request
+## Request
 Request information and functionality is provided by the request parameter:
 ~~~java
 request.attributes();             // the attributes list
@@ -188,7 +191,7 @@ request.url();                    // the url. e.g. "http://example.com/foo"
 request.userAgent();              // user agent
 ~~~
 
-# Response
+## Response
 Response information and functionality is provided by the response parameter:
 
 ~~~java
@@ -203,7 +206,7 @@ response.type();               // get the content type
 response.type("text/xml");     // set content type to text/xml
 ~~~
 
-# Query Maps
+## Query Maps
 Query maps allows you to group parameters to a map by their prefix. This allows you to group two parameters like `user[name]` and `user[age]` to a user map.
 ~~~java
 request.queryMap().get("user", "name").value();
@@ -212,7 +215,7 @@ request.queryMap("user").get("age").integerValue();
 request.queryMap("user").toMap();
 ~~~
 
-# Cookies
+## Cookies
 ~~~java
 request.cookies();                         // get map of all request cookies
 request.cookie("foo");                     // access request cookie by name
@@ -222,7 +225,7 @@ response.cookie("foo", "bar", 3600, true); // secure cookie
 response.removeCookie("foo");              // remove cookie
 ~~~
 
-# Sessions
+## Sessions
 Every request has access to the session created on the server side, provided with the following methods:
 ~~~java
 request.session(true)                      // create and return session
@@ -235,7 +238,7 @@ request.session().isNew()                  // Check if session is new
 request.session().raw()                    // Return servlet object
 ~~~
 
-# Halting
+## Halting
 To immediately stop a request within a filter or route use `halt()`:
 ~~~java
 halt();                // halt 
@@ -246,7 +249,7 @@ halt(401, "Go away!"); // halt with status and message
 
 `halt()` is not intended to be used inside exception-mappers.
 
-# Filters
+## Filters
 Before-filters are evaluated **before each request**, and can read the request and read/modify the response.  
 To stop execution, use `halt()`:
 ~~~java
@@ -281,7 +284,7 @@ before("/protected/*", (request, response) -> {
 });
 ~~~
 
-# Redirects
+## Redirects
 You can trigger a browser redirect with the redirect method on the response:
 ~~~java
 response.redirect("/bar");
@@ -292,7 +295,7 @@ You can also trigger a browser redirect with specific HTTP 3XX status code:
 response.redirect("/bar", 301); // moved permanently
 ~~~
 
-## Redirect API
+### Redirect API
 There is also a convenience API for redirects which can be used directly without the response:
 
 ~~~java
@@ -308,9 +311,9 @@ redirect.any("/fromPath", "/toPath", Redirect.Status.MOVED_PERMANENTLY);
 
 Remember to **import Spark statically** instead of prefixing it as Spark.redirect
 
-# Custom error handling {#error-handling}
+## Custom error handling {#error-handling}
 
-## Not found (code 404) handling
+### Not found (code 404) handling
 
 ~~~java
 // Using string/html
@@ -325,7 +328,7 @@ notFound((req, res) -> {
 });
 ~~~
 
-## Internal server error (code 500) handling
+### Internal server error (code 500) handling
 ~~~java
 // Using string/html
 internalServerError("<html><body><h1>Custom 500 handling</h1></body></html>");
@@ -339,7 +342,7 @@ internalServerError((req, res) -> {
 });
 ~~~
 
-# Exception Mapping
+## Exception Mapping
 To handle exceptions of a configured type for all routes and filters:
 ~~~java
 get("/throwexception", (request, response) -> {
@@ -351,7 +354,7 @@ exception(YourCustomException.class, (exception, request, response) -> {
 });
 ~~~
 
-# Static Files
+## Static Files
 You can assign a folder in the classpath serving static files with the `staticFiles.location()` method. Note that the public directory name is not included in the URL.  
 A file `/public/css/style.css` is made available as `http://{host}:{port}/css/style.css`
 
@@ -368,14 +371,14 @@ staticFiles.externalLocation(System.getProperty("java.io.tmpdir"));
 
 Static files location must be configured before route mapping. If your application has no routes, `init()` must be called manually after location is set.
 
-## Cache/Expire time
+### Cache/Expire time
 You can specify the expire time (in seconds). By default there is no caching.
 
 ~~~java
 staticFiles.expireTime(600); // ten minutes
 ~~~
 
-## Setting custom headers
+### Setting custom headers
 ~~~java
 staticFiles.header("Key-1", "Value-1");
 staticFiles.header("Key-1", "New-Value-1"); // Using the same key will overwrite value
@@ -383,7 +386,7 @@ staticFiles.header("Key-2", "Value-2");
 staticFiles.header("Key-3", "Value-3");
 ~~~
 
-# ResponseTransformer {#response-transformer}
+## ResponseTransformer {#response-transformer}
 Mapped routes that transform the output from the handle method. This is done by extending the `ResponseTransformer` object and passing it to the mapping method. Example of a route transforming output to JSON using Gson:
 
 ~~~java
@@ -416,7 +419,7 @@ Gson gson = new Gson();
 get("/hello", (request, response) -> new MyMessage("Hello World"), gson::toJson);
 ~~~
 
-# Views and Templates
+## Views and Templates
 Spark has community-provided wrappers for a lot of popular template engines:
 
 <div class="template-engine-list" markdown="1">
@@ -469,7 +472,7 @@ public static String render(Map<String, Object> model, String templatePath) {
 
 {% for templateEngine in templateEngines %}
 <div class="template-engine" markdown="1">
-## {{templateEngine | capitalize}} {#{{templateEngine}}}
+### {{templateEngine | capitalize}} {#{{templateEngine}}}
 Renders HTML using the {{templateEngine | capitalize}} template engine. 
 Source and example on [GitHub](https://github.com/perwendel/spark-template-engines/tree/master/spark-template-{{templateEngine}}).
 ~~~markup
@@ -482,11 +485,11 @@ Source and example on [GitHub](https://github.com/perwendel/spark-template-engin
 </div>
 {% endfor %}
 
-# Embedded web server
+## Embedded web server
 
 Standalone Spark runs on an embedded [Jetty](http://eclipse.org/jetty/) web server.
 
-## Port
+### Port
 By default, Spark runs on port 4567. If you want to set another port, use `port()`. 
 This has to be done before declaring routes and filters:
 
@@ -494,7 +497,7 @@ This has to be done before declaring routes and filters:
 port(8080); // Spark will run on port 8080
 ~~~
 
-## Secure (HTTPS/SSL) {#secure}
+### Secure (HTTPS/SSL) {#secure}
 
 You can set the connection to be secure via the `secure()` method.\\
 This has to be done before any route mapping:
@@ -505,7 +508,7 @@ secure(keystoreFilePath, keystorePassword, truststoreFilePath, truststorePasswor
 
 If you need more help, check out the [FAQ](#enable-ssl).
 
-## ThreadPool
+### ThreadPool
 
 You can set the maximum number of threads easily:
 
@@ -523,7 +526,7 @@ int timeOutMillis = 30000;
 threadPool(maxThreads, minThreads, timeOutMillis);
 ~~~
 
-# Waiting for Initialization {#awaitinit}
+### Waiting for Initialization {#awaitinit}
 You can use the method `awaitInitialization()` to check if the server is ready to handle requests. This is usually done in a separate thread, for example to run a health check module after your server has started.  
 The method causes the current thread to wait until the embedded Jetty server has been initialized. Initialization is triggered by defining routes and/or filters. So, if you're using just one thread don't put this before you define your routes and/or filters.
 
@@ -531,7 +534,7 @@ The method causes the current thread to wait until the embedded Jetty server has
 awaitInitialization(); // Wait for server to be initialized
 ~~~
 
-# WebSockets
+### WebSockets
 WebSockets provide a protocol full-duplex communication channel over a single TCP connection, meaning you can send message back and forth over the same connection.
 
 WebSockets only works with the embedded Jetty server, and must be defined before regular HTTP routes. To create a WebSocket route, you need to provide a path and a handler class:
@@ -573,7 +576,7 @@ public class EchoWebSocket {
 }
 ~~~
 
-# Other web server
+## Other web server
 To run Spark on another web server (instead of the embedded jetty server), an implementation of the interface `spark.servlet.SparkApplication` is needed. You have to initialize your routes in the `init()` method, and the following filter might have to be configured in your web.xml:
 
 ~~~xml
@@ -591,7 +594,7 @@ To run Spark on another web server (instead of the embedded jetty server), an im
 </filter-mapping>
 ~~~
 
-# GZIP
+## GZIP
 GZIP is done automatically if it's in both the request and the response headers. This usually only means that you have to set it in your response headers.
 
 If you want to GZIP a single response, you can add it manually to your route:
@@ -610,11 +613,11 @@ after((request, response) -> {
 });
 ~~~
 
-# Javadoc
-## javadoc.io
+## Javadoc
+### javadoc.io
 Javadoc is available at [javadoc.io](http://javadoc.io/doc/com.sparkjava/spark-core).
 
-## Build it yourself
+### Build it yourself
 After getting the source from [GitHub](https://github.com/perwendel/spark) run:
 
 ~~~bash
@@ -623,10 +626,10 @@ mvn javadoc:javadoc
 The result is put in /target/site/apidocs
 
 
-# Examples and FAQ
+## Examples and FAQ
 Examples can be found on the project's page on [GitHub](https://github.com/perwendel/spark/blob/master/README.md#examples).
 
-## How do I upload something?
+### How do I upload something?
 _Note: This applies to the standard configuration of Spark (embedded jetty). If you're using Spark with some other webserver, this might not apply to you._
 
 To upload a file you need a form and a post handler. First, create a form with the correct enctype, and an input field with the type "file" and a name of your choice (here "upoaded_file"):
@@ -650,7 +653,7 @@ post("/yourUploadPath", (request, response) -> {
 
 The Java-IO-stuff is left out as it's not Spark-specific, but you can see a fully working example [here](https://github.com/tipsy/spark-file-upload).
 
-## How do I enable SSL/HTTPS?
+### How do I enable SSL/HTTPS?
 Enabling HTTPS/SSL requires you to have a keystore file, which you can generate using the Java keytool [(→ oracle docs)](https://docs.oracle.com/cd/E19509-01/820-3503/ggfen/index.html). Once you have the keystore file, just point to its location and include its password.
 
 ~~~java
@@ -660,7 +663,7 @@ secure(keyStoreLocation, keyStorePassword, null, null);
 ~~~
 Check out the [fully working example](https://github.com/tipsy/spark-ssl) on GitHub if you need more guidance.
 
-## How do I enable logging?
+### How do I enable logging?
 You might have seen this message when starting Spark:
 ~~~bash
 SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
@@ -677,7 +680,7 @@ To enable logging, just add the following dependency to your project:
 </dependency>
 ~~~
 
-## How do I enable automatic refresh of static files?
+### How do I enable automatic refresh of static files?
 If you use `staticFiles.location()`, meaning you keep your static files in the classpath, static resources are copied to a target folder when you build your application. This means you have to make/build your project in order to refresh static files. A workaround for this is to tell Spark to read static files from the absolute path to the src-directory. If you do this you will see changes instantly when you refresh, but if you build a jar file it will only work on your computer (because of the absolute path). So, **only use this during development.**
 
 ~~~java
