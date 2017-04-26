@@ -6,8 +6,9 @@ date:   2015-06-01 10:34:52
 comments: true
 permalink: /tutorials/json-and-html-from-same-endpoints
 github: https://github.com/sparktutorials/BlogService_SparkExample
+category: intermediate
 summarytitle: Freemarker template example
-summary: In this tutorial you will learn how to create a HTML view of a blog in Spark
+summary: Ccreate a HTML view of a blog
 ---
 
 ## Offering the same data as both JSON and HTML

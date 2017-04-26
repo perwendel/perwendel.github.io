@@ -6,9 +6,9 @@ date:   2015-09-22 10:34:52
 comments: true
 permalink: /tutorials/twitter-clone
 github: https://github.com/eh3rrera/minitwit
+category: intermediate
 summarytitle: Building a Twitter clone
-summary: >
-  This tutorial will walk you through the steps of creating a mini Twitter clone using Spark, Freemarker, Spring, and HSQLDB to show you how to build a simple but complete web application.
+summary: Create a Twitter clone using Spark, Freemarker, Spring, and HSQLDB
 ---
 
 ## What you will learn

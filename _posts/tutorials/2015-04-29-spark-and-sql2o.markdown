@@ -5,8 +5,9 @@ author: <a href="http://tomassetti.me" target="_blank">Federico Tomassetti</a>
 date:   2015-04-29 10:34:52
 comments: true
 permalink: /tutorials/sql2o-database
+category: intermediate
 summarytitle: Database setup (sql2o)
-summary: This tutorial will teach you how to use a database with your Spark application. We will discuss when it is appropriate to use an ORM and describe how you can organize your code to make it easily testable.
+summary: Connect Spark to a database using sql2o
 ---
 
 ## What you will learn in this post

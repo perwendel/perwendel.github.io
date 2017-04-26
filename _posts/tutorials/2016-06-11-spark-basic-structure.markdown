@@ -6,9 +6,9 @@ date: 2016-06-10 11:11:11
 comments: true
 permalink: /tutorials/application-structure
 github: https://github.com/tipsy/spark-basic-structure
+category: simple
 summarytitle: Basic webapp structure
-summary: >
- In this tutorial you will learn how to create a basic Spark application with filters, controllers, views, authentication, localization, error handling, and more.
+summary: Create a basic Spark application with filters, controllers, authentication, localization, etc.
 ---
 
 ## What You Will Learn

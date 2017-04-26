@@ -4,9 +4,9 @@ title:  "Spark Video Tutorials"
 author: <a href="https://www.linkedin.com/in/davidaase" target="_blank">David Åse</a>
 date:   2015-08-04 15:43:21
 permalink: /tutorials/video-tutorials
+category: intermediate
 summarytitle: Video tutorials
-summary: > 
-    This post contains an overview of Spark courses at <a href="https://learnhowtoprogram.com" target="_blank">learnhowtoprogram.com</a> with links to their videos.
+summary: Links to video tutorials from <a href="https://learnhowtoprogram.com" target="_blank">learnhowtoprogram.com</a>.
 ---
 
 Our friends over at <a href="https://www.learnhowtoprogram.com/courses" target="_blank">learnhowtoprogram.com</a> have been working on a series of Java courses for beginners, all of which feature Spark. This post contains an overview of these courses with direct links to their videos.

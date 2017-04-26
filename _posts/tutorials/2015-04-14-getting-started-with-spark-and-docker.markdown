@@ -6,8 +6,9 @@ author: Matthias Lübken from <a href="https://giantswarm.io/" target="_blank">G
 comments: true
 permalink: /tutorials/docker
 github: https://github.com/giantswarm/sparkexample
+category: simple
 summarytitle: Docker setup
-summary: This tutorial provides a short and simple example on how to get started with Spark and Java development on Docker. 
+summary: Get started with Spark on Docker
 ---
 
 ## Background

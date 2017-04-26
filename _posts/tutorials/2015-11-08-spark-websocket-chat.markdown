@@ -6,9 +6,9 @@ date: 2015-11-08 22:22:22
 comments: true
 permalink: /tutorials/websocket-chat
 github: https://github.com/tipsy/spark-websocket
+category: simple
 summarytitle: Websocket chat app
-summary: >
- In this tutorial you will learn to work with WebSockets in Spark to create a real-time chat app. <br> Some  (simple) JavaScript is required.
+summary: Use WebSockets in Spark to create a real-time chat app.
 ---
 
 ## What You Will Learn

@@ -6,9 +6,9 @@ date: 2016-06-26 11:11:11
 comments: true
 permalink: /tutorials/ajax-without-writing-javascript
 github: https://github.com/tipsy/spark-intercooler
+category: simple
 summarytitle: JavaScript todo-list app
-summary: >
- Learn how to create a modern single page application in Spark and intercooler.js without writing JavaScript.
+summary: Create a modern single page application in Spark and intercooler.js without writing JavaScript.
 ---
 
 ## What You Will Learn

@@ -5,9 +5,9 @@ author: <a href="https://www.linkedin.com/in/franklin-gauer-iii-4271666" target=
 date: 2016-05-01 22:22:22
 comments: true
 permalink: /tutorials/cors
+category: simple
 summarytitle: CORS example
-summary: >
- Some boilerplate code to enable CORS on your Spark server.
+summary: How to enable CORS in Spark.
 ---
 
 ## CORS (Cross-Origin Resource Sharing)

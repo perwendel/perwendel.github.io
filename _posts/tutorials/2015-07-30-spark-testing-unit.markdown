@@ -5,8 +5,9 @@ author: <a href="http://tomassetti.me" target="_blank">Federico Tomassetti</a>
 date:   2015-07-30 10:34:52
 comments: true
 permalink: /tutorials/unit-testing
+category: intermediate
 summarytitle: Unit testing
-summary: In this tutorial series you will learn an approach for writing testable Spark applications from the ground up.
+summary: Example approach for Unit testing in Spark.
 ---
 
 <div class="notification"><em>This is part one of a two-part tutorial series on testing in which we will outline how to write a testable Spark application from the ground up. If you already have a finished application that you want to start testing using the approach described here, some refactoring will be required. </em></div>

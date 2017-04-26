@@ -1,21 +1,3 @@
-.tutorial-summary {
-    + .tutorial-summary {
-        margin-top: 24px;
-    }
-    h2 {
-        margin: 0;
-        font: 22px "Trebuchet MS", Helvetica, sans-serif;
-    }
-    p {
-        font-size: 15px;
-        margin: 5px 0;
-    }
-    .tutorial-summary__meta {
-        font-size: 13px;
-        color: #888;
-    }
-}
-
 .tutorial {
     h1, h2, h3, h4 {
         font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -37,6 +19,37 @@
             padding-top: 8px;
             margin-top: 8px;
             border-top: 1px solid #ddd;
+        }
+    }
+}
+
+.tutorial-overview {
+    overflow: hidden;
+}
+
+ul.tutorial-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    float: left;
+    h2 {
+        margin-top: 0; 
+    }
+    li {
+        padding-right: 24px;
+        + li {
+            margin-top: 24px;
+        }
+        h2 {
+            font-size: 20px;
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p {
+            font-size: 13px;
         }
     }
 }

@@ -6,9 +6,9 @@ date: 2017-01-28 11:11:11
 comments: true
 permalink: /tutorials/kotlin
 github: https://github.com/tipsy/spark-kotlin
-summarytitle: Kotlin CRUD REST API
-summary: >
- Learn how to use Kotlin with Spark by creating a simple CRUD REST API.
+category: simple
+summarytitle: Using Spark with Kotlin
+summary: Use Kotlin with Spark to create a simple CRUD REST API.
 ---
 
 ## What You Will Learn

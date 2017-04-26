@@ -5,8 +5,9 @@ author: <a href="http://tomassetti.me" target="_blank">Federico Tomassetti</a>
 date:   2015-07-31 10:34:52
 comments: true
 permalink: /tutorials/functional-testing
+category: intermediate
 summarytitle: Functional testing
-summary: In this post we will have a look at functional tests for Spark using cucumber.
+summary: Write functional tests for Spark using cucumber.
 ---
 
 <div class="notification"><em>This is part two of a two-part tutorial series on testing in which we outline how to write a testable Spark application from the ground up.
