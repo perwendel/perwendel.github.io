@@ -1,28 +1,26 @@
-pre[class*="language-"] {
-    background: #30312a;
-}
-
-code[class*="language-"],
-pre[class*="language-"] {
-	font-family: 'Fira Mono', monospace;
-    font-size: 15px;
-    line-height: 1.6;
+.highlighter-rouge {
+    margin: 10px 0;
+    position: relative;
+    overflow: auto;
+    pre {
+        overflow: auto;
+        background: #30312a;
+        code {
+            float: left;
+            font-family: 'Fira Mono', monospace;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+    }
 }
 
 .smaller-code {
-    code[class*="language-"], 
-    pre[class*="language-"] {
+    pre code {
         font-size: 13px;
     }
 }
 
 // Toolbar
-
-.highlighter-rouge {
-    margin: 10px 0;
-    position: relative;
-    overflow: auto;
-}
 
 pre.highlight {
     margin: 0;
