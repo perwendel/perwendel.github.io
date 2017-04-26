@@ -5,7 +5,7 @@ rightmenu: false
 permalink: /download
 ---
 
-<h2 class="no-margin-top">A Lightweight Web Framework</h2>
+<h1 class="no-margin-top">A Lightweight Web Framework</h1>
 Spark Framework is a true micro Java web framework. Its total size is less than a megabyte, and to keep it lean and clean we decided to cut support for Java 7 in Spark 2. If you are stuck with Java 7 for whatever reason, you unfortunately have to have to use Spark 1.
 
 ## Download Spark Framework
