@@ -9,7 +9,7 @@ permalink: /tutorials/
 {% assign intermediateTuts = (tutorials | where: "category" , "intermediate") %}
 
 <div class="tutorials-header" markdown="1">
-We recommend starting with either the [Maven setup](/maven-setup) or [Gradle setup](/gradle-setup) tutorial, then going through the [Basic webapp structure](/application-structure) tutorial
+We recommend starting with either the [Maven setup](maven-setup) or [Gradle setup](gradle-setup) tutorial, then going through the [Basic webapp structure](application-structure) tutorial
 
 </div>
 
