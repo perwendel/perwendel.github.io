@@ -149,7 +149,6 @@ Another thing worth noticing is that the find-functions return `User?`, which me
 `findByEmail()`, Kotlin vs Java:
 
 ~~~kotlin
-
 // Kotlin 
 fun findByEmail(email: String): User? {
     return users.values.find { it.email == email }
