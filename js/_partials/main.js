@@ -19,7 +19,6 @@ smoothScroll.init({ // https://github.com/cferdinandi/smooth-scroll
 // scroll to current element on load
 if (window.location.hash && performance.navigation.type !== 1) {
     setTimeout(function() {
-        var anchor = document.querySelector(window.location.hash);
         window.scrollTo(0, window.scrollY - 106);
     }, 0);
 }
