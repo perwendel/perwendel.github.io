@@ -3,6 +3,7 @@
     position: relative;
     overflow: auto;
     pre {
+        margin: 0;
         overflow: auto;
         background: #30312a;
         padding: 15px;
@@ -23,10 +24,6 @@
 
 // Toolbar
 
-pre.highlight {
-    margin: 0;
-}
-    
 pre.code-toolbar {
     position: initial;
 }

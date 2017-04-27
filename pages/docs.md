@@ -68,7 +68,8 @@ stop();
 ~~~
 
 ### Wait, what about starting the server?
-The server is automatically started when you do something that requires the server to be started (i.e. declaring a route or setting the port). You can also manually start the server by calling `init()`.
+The server is automatically started when you do something that requires the server to be started (i.e. declaring a route or setting the port).  
+You can also manually start the server by calling `init()`.
 
 You can specify what should happen if initialization fails: 
 
@@ -475,6 +476,8 @@ public static String render(Map<String, Object> model, String templatePath) {
 ### {{templateEngine | capitalize}} {#{{templateEngine}}}
 Renders HTML using the {{templateEngine | capitalize}} template engine. 
 Source and example on [GitHub](https://github.com/perwendel/spark-template-engines/tree/master/spark-template-{{templateEngine}}).
+
+<div class="language-xml highlighter-rouge" markdown="1">
 ~~~markup
 <dependency>
     <groupId>com.sparkjava</groupId>
@@ -482,6 +485,7 @@ Source and example on [GitHub](https://github.com/perwendel/spark-template-engin
     <version>{{site.templateversion}}</version>
 </dependency>
 ~~~
+</div>
 </div>
 {% endfor %}
 
