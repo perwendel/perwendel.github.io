@@ -13,8 +13,6 @@
     <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
-</head>
-<body>
     <noscript><style>
         :target:before {
             content: "";
@@ -22,6 +20,9 @@
             height: 100px;
         }
     </style></noscript>
+    <style>{% include inlineCss.css %}</style>
+</head>
+<body>
     {% include gtm.html %}
     <a id="fork-me" href="https://github.com/perwendel/spark" target="_blank">
         <img style="position:fixed;top:0;right:0;border:0;z-index:99999" src="{% include base64/ghFork.b64 %}" alt="Fork me on GitHub">

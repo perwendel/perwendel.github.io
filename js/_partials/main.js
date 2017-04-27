@@ -5,24 +5,26 @@ for (var i = 0; i < document.links.length; i++) {
    } 
 }
 
+var offset = 24;
+var fixedHeaderSelector = 'body > header';
+smoothScroll.init({ // https://github.com/cferdinandi/smooth-scroll
+    selector: 'a[href^="#"]', // Selector for links (must be a class, ID, data attribute, or element tag)
+    selectorHeader: fixedHeaderSelector, // Selector for fixed headers [optional]
+    speed: 500, // Integer. How fast to complete the scroll in milliseconds
+    easing: 'easeInOutCubic', // Easing pattern to use
+    offset: offset, // Integer. How far to offset the scrolling anchor location in pixels
+    callback: function ( anchor, toggle ) {} // Function to run after scrolling
+});
+
 // scroll to current element on load
 if (window.location.hash) {
     setTimeout(function() {
-       window.scrollTo(0, window.scrollY - 104); 
+        var anchor = document.querySelector(window.location.hash);
+        //smoothScroll.animateScroll(anchor);    
     }, 0);
 }
 
 setTimeout(function() {
-    var offset = 24;
-    var fixedHeaderSelector = 'body > header';
-    smoothScroll.init({ // https://github.com/cferdinandi/smooth-scroll
-        selector: 'a[href^="#"]', // Selector for links (must be a class, ID, data attribute, or element tag)
-        selectorHeader: fixedHeaderSelector, // Selector for fixed headers [optional]
-        speed: 500, // Integer. How fast to complete the scroll in milliseconds
-        easing: 'easeInOutCubic', // Easing pattern to use
-        offset: offset, // Integer. How far to offset the scrolling anchor location in pixels
-        callback: function ( anchor, toggle ) {} // Function to run after scrolling
-    });
     gumshoe.init({ // https://github.com/cferdinandi/gumshoe (scrollspy) 
         selector: '#spy-nav > ul > li > a', // Default link selector 
         selectorHeader: fixedHeaderSelector, // Fixed header selector 

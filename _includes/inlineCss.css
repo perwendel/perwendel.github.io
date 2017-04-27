@@ -1,0 +1,8 @@
+/* Styles that affect the length of the document */
+p code,
+li code {
+        font-size: 80%;
+        border: 1px solid #ccc;
+        padding: 1px 3px;
+    }
+}
