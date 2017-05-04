@@ -229,14 +229,14 @@ response.removeCookie("foo");              // remove cookie
 ## Sessions
 Every request has access to the session created on the server side, provided with the following methods:
 ~~~java
-request.session(true)                      // create and return session
-request.session().attribute("user")        // Get session attribute 'user'
-request.session().attribute("user", "foo") // Set session attribute 'user'
-request.session().removeAttribute("user")  // Remove session attribute 'user'
-request.session().attributes()             // Get all session attributes
-request.session().id()                     // Get session id
-request.session().isNew()                  // Check if session is new
-request.session().raw()                    // Return servlet object
+request.session(true);                     // create and return session
+request.session().attribute("user");       // Get session attribute 'user'
+request.session().attribute("user","foo"); // Set session attribute 'user'
+request.session().removeAttribute("user"); // Remove session attribute 'user'
+request.session().attributes();            // Get all session attributes
+request.session().id();                    // Get session id
+request.session().isNew();                 // Check if session is new
+request.session().raw();                   // Return servlet object
 ~~~
 
 ## Halting
