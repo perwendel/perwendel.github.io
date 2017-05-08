@@ -19,9 +19,9 @@ Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news
 * [Spark 2.0 released](#spark-20-released)
 </div>
 
-## Spark 2.6.0.RC0 (April 2017) {#spark-26-released}
+## Spark 2.6.0 released (April 2017) {#spark-26-released}
 
-There are some big changes this time, {% include macros/mavenLink.html version="2.6.0.RC0" %}
+There are some big changes this time! {% include macros/mavenLink.html version="2.6.0" %}
 
 Changes
 * Embedded Jetty is now fully configurable **(!)**
