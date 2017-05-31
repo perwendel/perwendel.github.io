@@ -6,7 +6,7 @@ permalink: /download
 ---
 
 ## Download Spark Framework
-Spark Framework is available both on [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Csparkjava) and GitHub [(java)](https://github.com/perwendel/spark), [(kotlin)](https://github.com/perwendel/spark-kotlin)
+Spark Framework is available both on [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Ccom.sparkjava) and GitHub [(java)](https://github.com/perwendel/spark), [(kotlin)](https://github.com/perwendel/spark-kotlin)
 
 ### Maven Users
 Add the following snippet to your [POM](http://maven.apache.org/pom.html):
