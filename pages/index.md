@@ -5,12 +5,26 @@ permalink: /
 ---
 
 <h2 class="no-margin-top">Quick start</h2>
+<h3>Java</h3>
 ~~~java
 import static spark.Spark.*;
 
 public class HelloWorld {
     public static void main(String[] args) {
         get("/hello", (req, res) -> "Hello World");
+    }
+}
+~~~
+
+<h3>Kotlin</h3>
+~~~kotlin
+import spark.kotlin.*
+
+fun main(args: Array<String>) {
+    val http: Http = ignite()
+
+    http.get("/hello") {
+        "Hello Spark Kotlin!"
     }
 }
 ~~~
