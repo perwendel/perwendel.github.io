@@ -9,7 +9,7 @@ permalink: /news
 Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news, and other Spark related content.
 
 <div id="spy-nav" class="right-menu" markdown="1">
-* [Spark Kotlin 1.0.0 released](#spark-kotlin-1.0.0-alpha-released)
+* [Spark Kotlin 1.0.0 released](#spark-kotlin-released)
 * [Spark 2.6 released](#spark-26-released)
 * [Spark 2.5.2 vulnerability](#vulnerability)
 * [Spark 2.5 released](#spark-25-released)
@@ -20,7 +20,7 @@ Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news
 * [Spark 2.0 released](#spark-20-released)
 </div>
 
-## Spark-kotlin 1.0.0-alpha released (May 2017) {#spark-kotlin-1.0.0-alpha-released}
+## Spark-kotlin 1.0.0-alpha released (May 2017) {#spark-kotlin-released}
 
 At last, we've taken the step to kotlin and it is awesome. {% include macros/mavenLinkKotlin.html version="1.0.0-alpha" %}
 
