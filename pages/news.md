@@ -19,6 +19,10 @@ Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news
 * [Spark 2.0 released](#spark-20-released)
 </div>
 
+## Spark-kotlin 1.1.0-alpha released (May 2017) {#spark-kotlin-1.0.0-alpha-released}
+
+At last, we've taken the step to kotlin and it is awesome. {% include macros/mavenLinkKotlin.html version="1.1.0-alpha" %}
+
 ## Spark 2.6.0 released (April 2017) {#spark-26-released}
 
 There are some big changes this time! {% include macros/mavenLink.html version="2.6.0" %}
