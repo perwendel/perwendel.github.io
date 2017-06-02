@@ -24,6 +24,16 @@ Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news
 
 At last, we've taken the step to kotlin and it is awesome. {% include macros/mavenLinkKotlin.html version="1.0.0-alpha" %}
 
+<div class="star-one star-two">
+    <div>
+        If you like spark-kotlin give us a star on GitHub:
+    </div>
+    <iframe id="starFrame" class="githubStar"
+            src="https://ghbtns.com/github-btn.html?user=perwendel&amp;repo=spark-kotlin&amp;type=star&amp;count=true&size=large"
+            frameborder="0" scrolling="0" width="205px" height="30px">
+    </iframe>
+</div>
+
 ## Spark 2.6.0 released (April 2017) {#spark-26-released}
 
 There are some big changes this time! {% include macros/mavenLink.html version="2.6.0" %}
