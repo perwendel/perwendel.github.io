@@ -43,7 +43,8 @@ We're usually pretty friendly, but questions like "How do I add Spark to Maven",
     firstName = "Love"
     lastName = "Löfdahl"
     role = "Co-founder spark-kotlin"
-    github = "lallemupp" 
+    twitter = "lallemupp"
+    github = "lallemupp"
     email = "love.lofdahl@gmail.com" 
     imgFile = "love.jpg"
 %}
