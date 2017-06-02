@@ -42,7 +42,7 @@ We're usually pretty friendly, but questions like "How do I add Spark to Maven",
 {% include macros/teamMember.html 
     firstName = "Love"
     lastName = "Löfdahl"
-    role = "Co-founder and maintainer spark-kotlin"
+    role = "Co-founder spark-kotlin"
     github = "lallemupp" 
     email = "love.lofdahl@gmail.com" 
     imgFile = "love.jpg"
