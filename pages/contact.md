@@ -45,7 +45,7 @@ We're usually pretty friendly, but questions like "How do I add Spark to Maven",
     role = "Co-founder and maintainer spark-kotlin"
     github = "lallemupp" 
     email = "love.lofdahl@gmail.com" 
-    imgFile = "love.png"
+    imgFile = "love.jpg"
 %}
 </div>
 
