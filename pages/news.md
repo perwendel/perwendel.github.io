@@ -24,6 +24,13 @@ Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news
 
 At last, we've taken the step to kotlin and it is awesome. {% include macros/mavenLinkKotlin.html version="1.0.0-alpha" %}
 
+~~~kotlin
+http.get("/java") {
+    status(404)
+    "Oops, are you looking for Java? You've entered the sublime domain of Kotlin"
+}
+~~~
+
 <div class="star-one star-two">
     <div>
         If you like spark-kotlin give us a star on GitHub:
