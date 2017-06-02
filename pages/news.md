@@ -29,8 +29,6 @@ http.get("/java") {
     status(404)
     "Oops, are you looking for Java? You've entered the sublime domain of Kotlin"
 }
-
-// dependency: "com.sparkjava:spark-kotlin:1.0.0-alpha"
 ~~~
 
 <div class="star-one star-two">

@@ -37,6 +37,8 @@ permalink: /documentation
 <h1 class="no-margin-top">Documentation</h1>
 Documentation here is always for the latest version of Spark. We don't have the capacity to maintain separate docs for each version, but Spark is always backwards compatible.
 
+
+
 ## Getting started
 
 **1:** Create a new maven project and add the dependency to your [POM.xml](http://maven.apache.org/pom.html):
