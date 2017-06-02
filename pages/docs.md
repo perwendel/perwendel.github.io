@@ -37,10 +37,11 @@ permalink: /documentation
 <h1 class="no-margin-top">Documentation</h1>
 Documentation here is always for the latest version of Spark. We don't have the capacity to maintain separate docs for each version, but Spark is always backwards compatible.
 
+Docs for spark-kotlin will arrive here ASAP.
+You can follow the progress of spark-kotlin on [(GitHub)](https://github.com/perwendel/spark-kotlin)       
+
 <div class="star-one star-two">
     <div>
-        Docs for spark-kotlin will arrive here ASAP.
-        You can follow the progress of spark-kotlin on [(GitHub)](https://github.com/perwendel/spark-kotlin)
         If you like spark-kotlin star us and help the community grow:
     </div>
     <iframe id="starFrame" class="githubStar"
