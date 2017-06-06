@@ -71,7 +71,7 @@ public class HelloWorld {
 http://localhost:4567/hello
 ~~~
 
-To see more console output from Spark (debug info, etc), you have to [add a logger](#add-a-logger) to your project.
+To see more console output from Spark (debug info, etc), you have to [add a logger](#how-do-i-enable-logging) to your project.
 
 ## Stopping the Server
 By calling the stop() method the server is stopped and all routes are cleared.
