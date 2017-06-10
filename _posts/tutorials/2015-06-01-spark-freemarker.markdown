@@ -8,7 +8,7 @@ permalink: /tutorials/json-and-html-from-same-endpoints
 github: https://github.com/sparktutorials/BlogService_SparkExample
 category: intermediate
 summarytitle: Freemarker template example
-summary: Ccreate a HTML view of a blog
+summary: Create a HTML view of a blog
 ---
 
 ## Offering the same data as both JSON and HTML
