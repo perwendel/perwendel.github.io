@@ -76,7 +76,7 @@ This is probably not what you learned in Java class, but I believe statics are b
 If your application is small, delcaring before-filters, routes, and after-filters all in the same location greatly improves the readability of your code. Just by looking at the class above, you can tell that there's a filter that adds trailing slashes to all endpoints (ex: /books -> /books/) and that any page can handle a locale change. You also get an overview of all the endpoints, and see that all routes are GZIPed after everything else.
 
 ### Path.Web and Controller.field
-It's usually a good idea to keep your paths in some sort of constant. In the above class I have a **Path** class with a subclass **Web** (it also has a subclass **Template**), which holds public final static Strings. That's just my preference, it's up to you how you want to do this. All my handlers are declared as static Route fields, grouping together functionality in the same classes (based on feature). Let's have a look at the LoginController:
+It's usually a good idea to keep your paths in some sort of constant. In the above class I have a **Path** class with a static nested class **Web** (it also has a static nested class **Template**), which holds public final static Strings. That's just my preference, it's up to you how you want to do this. All my handlers are declared as static Route fields, grouping together functionality in the same classes (based on feature). Let's have a look at the LoginController:
 
 <pre><code class="language-java">
 {% capture code %}{% include codeExamples/sparkBasicStructure/LoginController.java %}{% endcapture %}{{ code | xml_escape }}
