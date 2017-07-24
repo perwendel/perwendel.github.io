@@ -8,7 +8,7 @@ permalink: /tutorials/jetty-request-log
 github: https://github.com/ygaller/spark-with-request-logger
 category: simple
 summarytitle: Embedded Jetty with request logger
-summary: Create a Spark instance with an embedded Jetty server configuration with a log4j request logger
+summary: Create a Spark instance with an embedded Jetty server containing a log4j request logger
 ---
 
 # Embedded Jetty Spark instance with request logger
