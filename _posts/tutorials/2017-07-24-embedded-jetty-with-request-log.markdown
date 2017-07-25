@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 title: "Creating an embedded Jetty server with a request log"
-author: <a href="https://www.linkedin.com/in/yairgaller" target="_blank">Yair Galler</a>
+author: <a href="https://www.linkedin.com/in/yair-galler" target="_blank">Yair Galler</a>
 date: 2017-07-24 21:00:00
 comments: true
 permalink: /tutorials/jetty-request-log
@@ -138,7 +138,7 @@ Now all that remains is to define the log4j logger and call the utility function
 
 ## The result
 
-After we spin up our Spark instance and go to [http://localhost:4567/hello], we will see the following output in logs:
+After we spin up our Spark instance and go to [http://localhost:4567/hello](http://localhost:4567/hello), we will see the following output in logs:
 
 ~~~console
 
