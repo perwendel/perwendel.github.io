@@ -14,5 +14,10 @@ Add the following snippet to your [POM](http://maven.apache.org/pom.html):
 {% include macros/mavenDep.md %}
 
 ## Non-maven Users
+
+### Build it yourself
 Clone the repo from [GitHub](https://github.com/perwendel/spark).\\
 If you really want to, you can also download Spark Framework as a [ZIP (from GitHub)](https://github.com/perwendel/spark/archive/master.zip)
+
+### Dowload the jar
+[https://repo1.maven.org/maven2/com/sparkjava/spark-core/](https://repo1.maven.org/maven2/com/sparkjava/spark-core/)
