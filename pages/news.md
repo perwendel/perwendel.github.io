@@ -9,6 +9,7 @@ permalink: /news
 Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news, and other Spark related content.
 
 <div id="spy-nav" class="right-menu" markdown="1">
+* [Spark 2.7 released](#spark-27-released)
 * [Spark Kotlin 1.0.0 released](#spark-kotlin-released)
 * [Spark 2.6 released](#spark-26-released)
 * [Spark 2.5.2 vulnerability](#vulnerability)
@@ -19,6 +20,12 @@ Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news
 * [Spark 2.1 released](#spark-21-released)
 * [Spark 2.0 released](#spark-20-released)
 </div>
+
+## Spark 2.7.0 released (November 2017) {#spark-27-released}
+
+A small release this time, probably the last before 3.0.0 {% include macros/mavenLink.html version="2.7.0" %}
+
+{% include macros/seeCommitHistory.html %}
 
 ## Spark-kotlin 1.0.0-alpha released (May 2017) {#spark-kotlin-released}
 
