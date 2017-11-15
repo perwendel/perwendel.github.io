@@ -9,6 +9,7 @@ permalink: /news
 Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news, and other Spark related content.
 
 <div id="spy-nav" class="right-menu" markdown="1">
+* [Spark 2.7.1 released](#spark-271-released)
 * [Spark 2.7 released](#spark-27-released)
 * [Spark Kotlin 1.0.0 released](#spark-kotlin-released)
 * [Spark 2.6 released](#spark-26-released)
@@ -20,6 +21,9 @@ Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news
 * [Spark 2.1 released](#spark-21-released)
 * [Spark 2.0 released](#spark-20-released)
 </div>
+
+## Spark 2.7.1 released (November 2017) {#spark-271-released}
+2.7.0 accidentally introduced a dependency on Jetty for one of the core classes. This dependency was removed in 2.7.1
 
 ## Spark 2.7.0 released (November 2017) {#spark-27-released}
 

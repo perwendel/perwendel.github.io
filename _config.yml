@@ -1,6 +1,6 @@
 # Site settings
-sparkversion: 2.7.0
-templateversion: 2.5.5
+sparkversion: 2.7.1
+templateversion: 2.7.1
 description: > # > means to ignore newlines as long as indent is kept
   Spark Framework - Create web applications in Java rapidly. 
   Spark is a micro web framework that lets you focus on writing your code, not boilerplate code.
