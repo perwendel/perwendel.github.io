@@ -1,5 +1,5 @@
 # Site settings
-sparkversion: 2.7.1
+sparkversion: 2.7.2
 templateversion: 2.7.1
 description: > # > means to ignore newlines as long as indent is kept
   Spark Framework - Create web applications in Java rapidly. 
