@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,16 +12,9 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml " | prepend: site.baseurl | prepend: site.url }}">
     <link rel="shortcut icon" type="image/png" href="/img/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
-    <noscript><style>
-        :target:before {
-            content: "";
-            display: block;
-            height: 100px;
-        }
-    </style></noscript>
-    <style>{% include inlineCss.css %}</style>
 </head>
 <body>
     {% include gtm.html %}
@@ -30,7 +23,7 @@
     </a>
     <header>
         <nav class="width-limit">
-            <a id="logo" href="/"><img src="/img/logo.svg"></a>
+            <a id="logo" href="/"><img src="/img/logo.svg" alt="Logo"></a>
             <ul>
                 <li><a href="/download">Download</a></li>
                 <li><a href="/documentation">Docs</a></li>
@@ -39,10 +32,11 @@
                 <li><a href="/contact">Contact</a></li>
             </ul>
             <div id="some-buttons">
-                 <div id="githubStar"><img id="starBg" style="width:92px;height:20px;" src="{% include base64/ghStars.b64 %}">
+                 <div id="githubStar">
+                    <img id="starBg" style="width:92px;height:20px;" src="{% include base64/ghStars.b64 %}" alt="">
                     <iframe id="starFrame" class="githubStar" 
                             src="https://ghbtns.com/github-btn.html?user=perwendel&amp;repo=spark&amp;type=star&amp;count=true" 
-                            frameborder="0" scrolling="0" width="95px" height="20px">
+                            width="95" height="20">
                     </iframe>
                 </div>
                 <a class="img-button" href="https://www.facebook.com/sparkjava" target="_blank">
