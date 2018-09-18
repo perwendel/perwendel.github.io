@@ -9,6 +9,7 @@ permalink: /news
 Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news, and other Spark related content.
 
 <div id="spy-nav" class="right-menu" markdown="1">
+* [Spark 2.8.0 released](#spark-280-released)
 * [Spark 2.7.2 released](#spark-272-released)
 * [Spark 2.7.1 released](#spark-271-released)
 * [Spark 2.7 released](#spark-27-released)
@@ -22,6 +23,13 @@ Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news
 * [Spark 2.1 released](#spark-21-released)
 * [Spark 2.0 released](#spark-20-released)
 </div>
+
+## Spark 2.8.0 released (Sept 2018) {#spark-280-released}
+Spark 2.8.0 Makes the Session cookie HTTP only and bumps Jetty to the latest version. It also fixes a couple of bugs to allow configuring static files and exception mapping per Spark instance. Adds an `awaitStop()` method which blocks until the server has stopped.  
+
+{% include macros/mavenLink.html version="2.8.0" %}
+
+{% include macros/seeCommitHistory.html %}
 
 ## Spark 2.7.2 released (March 2018) {#spark-272-released}
 Spark 2.7.2 fixes a security problem in the serving of static files. It also adds support for specific keystore aliases and bumps Jetty to the latest version
