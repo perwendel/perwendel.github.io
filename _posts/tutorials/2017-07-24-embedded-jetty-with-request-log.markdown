@@ -103,7 +103,7 @@ public class EmbeddedJettyFactoryConstructor {
 
 The implementation here is identical to Spark's embedded Jetty with the addition of `server.setRequestLog(requestLog);`
 
-### Creating a utitily function for the embedded server
+### Creating a utility function for the embedded server
 
 Let's tie it together in a utility function that accepts our original log4j logger and overrides Spark's default Jetty implementation with ours
 
