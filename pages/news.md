@@ -26,7 +26,7 @@ Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news
 </div>
 
 ## Spark 2.9.0 released (March 2019) {#spark-290-released}
-Spark 2.9.0 Makes the matched route path available, bumps Jetty to the latest version, add support for .mjs files for MIME type auto detection and also includes some minor bug fixes.
+Spark 2.9.0 Makes the matched route path available, bumps Jetty to the latest version, adds support for .mjs files for MIME type auto detection and also includes some minor bug fixes.
 
 {% include macros/mavenLink.html version="2.9.0" %}
 
