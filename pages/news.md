@@ -26,14 +26,14 @@ Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news
 </div>
 
 ## Spark 2.9.0 released (March 2019) {#spark-290-released}
-Spark 2.9.0 Makes the matched route path available, bumps Jetty to the latest version, adds support for .mjs files for MIME type auto detection and also includes some minor bug fixes.
+Spark 2.9.0 makes the matched route path available, bumps Jetty to the latest version, adds support for .mjs files for MIME type auto detection and also includes some minor bug fixes.
 
 {% include macros/mavenLink.html version="2.9.0" %}
 
 {% include macros/seeCommitHistory.html %}
 
 ## Spark 2.8.0 released (Sept 2018) {#spark-280-released}
-Spark 2.8.0 Makes the Session cookie HTTP only and bumps Jetty to the latest version. It also fixes a couple of bugs to allow configuring static files and exception mapping per Spark instance. Adds an `awaitStop()` method which blocks until the server has stopped.  
+Spark 2.8.0 makes the Session cookie HTTP only and bumps Jetty to the latest version. It also fixes a couple of bugs to allow configuring static files and exception mapping per Spark instance. Adds an `awaitStop()` method which blocks until the server has stopped.  
 
 {% include macros/mavenLink.html version="2.8.0" %}
 
