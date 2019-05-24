@@ -29,7 +29,7 @@ Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news
 ## Spark 2.9.1 released (May 2019) {#spark-291-released}
 There was security problems identified in the Jetty version used in Spark 2.9.0. Spark 2.9.1 uses the newest Jetty version where these problems have been addressed. 
 
-{% include macros/mavenLink.html version="2.9.0" %}
+{% include macros/mavenLink.html version="2.9.1" %}
 
 {% include macros/seeCommitHistory.html %}
 
