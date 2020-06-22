@@ -31,15 +31,6 @@ We're usually pretty friendly, but questions like "How do I add Spark to Maven",
     imgFile = "per.png"
 %}
 {% include macros/teamMember.html 
-    firstName = "David"
-    lastName = "Åse"
-    role = "Webmaster and co-maintainer"
-    linkedin = "davidase" 
-    github = "tipsy" 
-    email = "mail.davidaase@gmail.com" 
-    imgFile = "david.png"
-%}
-{% include macros/teamMember.html 
     firstName = "Love"
     lastName = "Löfdahl"
     role = "Co-founder spark-kotlin"
