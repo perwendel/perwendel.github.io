@@ -3,7 +3,7 @@
 <dependency>
     <groupId>com.sparkjava</groupId>
     <artifactId>spark-core</artifactId>
-    <version>{{site.sparkversion}}</version>
+    <version>2.9.1</version>
 </dependency>
 ~~~
 <h3>Kotlin</h3>
