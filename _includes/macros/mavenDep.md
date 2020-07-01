@@ -20,7 +20,7 @@
 ### Other dependency managers:
 <div class="smaller-code" markdown="1">
 ~~~java
-Gradle : compile "com.sparkjava:spark-core:{{site.sparkversion}}" // add to build.gradle (for Java users)
+Gradle : compile "com.sparkjava:spark-core:2.9.1" // add to build.gradle (for Java users)
 Gradle : compile "com.sparkjava:spark-kotlin:1.0.0-alpha" // add to build.gradle (for Kotlin users)
    Ivy : <dependency org="com.sparkjava" name="spark-core" rev="2.9.1" conf="build" /> // ivy.xml
    SBT : libraryDependencies += "com.sparkjava" % "spark-core" % "2.9.1" // build.sbt
