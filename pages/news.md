@@ -9,6 +9,7 @@ permalink: /news
 Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news, and other Spark related content.
 
 <div id="spy-nav" class="right-menu" markdown="1">
+* [Spark 2.9.2 released](#spark-292-released)
 * [Spark 2.9.1 released](#spark-291-released)
 * [Spark 2.9.0 released](#spark-290-released)
 * [Spark 2.8.0 released](#spark-280-released)
@@ -25,6 +26,13 @@ Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news
 * [Spark 2.1 released](#spark-21-released)
 * [Spark 2.0 released](#spark-20-released)
 </div>
+
+## Spark 2.9.2 released (July 2020) {#spark-292-released}
+A maintenance release of Spark. 
+
+{% include macros/mavenLink.html version="2.9.2" %}
+
+{% include macros/seeCommitHistory.html %}
 
 ## Spark 2.9.1 released (May 2019) {#spark-291-released}
 There was security problems identified in the Jetty version used in Spark 2.9.0. Spark 2.9.1 uses the newest Jetty version where these problems have been addressed. 
