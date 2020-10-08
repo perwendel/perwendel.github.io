@@ -149,6 +149,15 @@ get("/say/*/to/*", (request, response) -> {
 });
 ~~~
 
+### Route unmapping
+
+Routes can be unmapped using the 'unmap' function:
+
+~~~java
+unmap("/hello"); // unmaps all routes with path 'hello'
+unmap("/hello", "get"); // unmaps all 'GET' routes with path 'hello'
+~~~
+
 ### Path groups
 If you have a lot of routes, it can be helpful to separate them into groups. This can be done by calling the `path()` method, which takes a `String prefix` and gives you a scope to declare routes and filters (or nested paths) in:
 
