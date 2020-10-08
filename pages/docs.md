@@ -10,6 +10,7 @@ permalink: /documentation
 * [Stopping the Server](#stopping-the-server)
 * [Routes](#routes)
 * [Route unmapping](#route-unmapping)
+* [Path Groups](#path-groups)
 * [Request](#request)
 * [Response](#response)
 * [Query Maps](#query-maps)
