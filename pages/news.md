@@ -31,7 +31,7 @@ Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news
 ## Spark 2.9.3 released (October 2020) {#spark-293-released}
 Includes update to latest Jetty version, methods for getting all routes and unmapping of routes, etc
 
-For full list goto <a href="https://github.com/perwendel/spark/blob/master/changeset.md">changeset.md</a>
+For full list goto <a href="https://github.com/perwendel/spark/blob/master/changeset/2.9.3-changeset.md">changeset.md</a>
 
 {% include macros/mavenLink.html version="2.9.3" %}
 
