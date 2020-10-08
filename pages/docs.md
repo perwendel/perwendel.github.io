@@ -9,6 +9,7 @@ permalink: /documentation
 * [Getting Started](#getting-started)
 * [Stopping the Server](#stopping-the-server)
 * [Routes](#routes)
+* [Route unmapping](#route-unmapping)
 * [Request](#request)
 * [Response](#response)
 * [Query Maps](#query-maps)
