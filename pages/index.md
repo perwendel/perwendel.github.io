@@ -35,7 +35,7 @@ http://localhost:4567/hello
 ~~~
 
 ## Sponsors
-Spark is sponsored by <a href="https://featureupvote.com/">Feature Upvote</a>. A big thanks to them for making further development of the project possible.
+Spark is sponsored by <a href="https://featureupvote.com/">Feature Upvote</a>. A big thanks to them for helping the project to grow.
 
 ## Built for productivity
 Spark Framework is a simple and expressive Java/Kotlin web framework DSL built for rapid development. Sparks intention is to provide an alternative for Kotlin/Java developers that want to develop their web applications as expressive as possible and with minimal boilerplate. With a clear philosophy Spark is designed not only to make you more productive, but also to make your code better under the influence of Spark’s sleek, declarative and expressive syntax.
