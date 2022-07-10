@@ -9,6 +9,7 @@ permalink: /news
 Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news, and other Spark related content.
 
 <div id="spy-nav" class="right-menu" markdown="1">
+* [Spark 2.9.4 released](#spark-294-released)
 * [Spark 2.9.3 released](#spark-293-released)
 * [Spark 2.9.2 released](#spark-292-released)
 * [Spark 2.9.1 released](#spark-291-released)
@@ -27,6 +28,13 @@ Follow us on **[Twitter](https://twitter.com/sparkjava)** to get the latest news
 * [Spark 2.1 released](#spark-21-released)
 * [Spark 2.0 released](#spark-20-released)
 </div>
+
+## Spark 2.9.4 released (July 2022) {#spark-294-released}
+Includes update to latest Jetty version and some other minor changes. 
+
+{% include macros/mavenLink.html version="2.9.4" %}
+
+{% include macros/seeCommitHistory.html %}
 
 ## Spark 2.9.3 released (October 2020) {#spark-293-released}
 Includes update to latest Jetty version, methods for getting all routes and unmapping of routes, etc
