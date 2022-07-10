@@ -22,7 +22,7 @@
 ~~~java
 Gradle : compile "com.sparkjava:spark-core:2.9.4" // add to build.gradle (for Java users)
 Gradle : compile "com.sparkjava:spark-kotlin:1.0.0-alpha" // add to build.gradle (for Kotlin users)
-   Ivy : <dependency org="com.sparkjava" name="spark-core" rev="2.9.3" conf="build" /> // ivy.xml
-   SBT : libraryDependencies += "com.sparkjava" % "spark-core" % "2.9.3" // build.sbt
+   Ivy : <dependency org="com.sparkjava" name="spark-core" rev="2.9.4" conf="build" /> // ivy.xml
+   SBT : libraryDependencies += "com.sparkjava" % "spark-core" % "2.9.4" // build.sbt
 ~~~
 </div>
