@@ -534,7 +534,7 @@ This has to be done before any route mapping:
 secure(keystoreFilePath, keystorePassword, truststoreFilePath, truststorePassword);
 ~~~
 
-If you need more help, check out the [FAQ](#enable-ssl).
+If you need more help, check out the [FAQ](#how-do-i-enable-sslhttps).
 
 ### ThreadPool
 
